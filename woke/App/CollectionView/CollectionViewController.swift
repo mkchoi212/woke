@@ -34,6 +34,7 @@ class CollectionViewController: UIViewController {
     var selected: Item?
     var selectedImage: UIImageView?
     var header: CollectionViewCell?
+    var banner: CollectionViewCell?
     
     var targetFrame: CGRect = .zero
     
@@ -61,7 +62,7 @@ class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         automaticallyAdjustsScrollViewInsets = false
-        view.backgroundColor = UIColor(red: 82/255, green: 77/255, blue: 153/255, alpha: 1)
+        view.backgroundColor = UIColor.white
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         if let selected = selected {
@@ -93,12 +94,36 @@ class CollectionViewController: UIViewController {
             
             header.layoutIfNeeded()
             view.layoutIfNeeded()
+        } else {
+            let margin = type(of: self).margin
+            banner = HeaderCollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 80))
+            guard let banner = banner else { return }
+            
+            banner.translatesAutoresizingMaskIntoConstraints = false
+            banner.item = selected
+            banner.container.backgroundColor = nil
+            view.addSubview(banner)
+            
+            let height = CGFloat(80)
+            var contentInset = collectionView.contentInset
+            contentInset.top += height
+            collectionView.contentInset = contentInset
+            
+            NSLayoutConstraint.activate([
+                banner.topAnchor.constraint(equalTo: view.topAnchor, constant: margin),
+                banner.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin),
+                banner.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin),
+                banner.heightAnchor.constraint(equalToConstant: height)
+                ])
+            
+            banner.layoutIfNeeded()
+            view.layoutIfNeeded()
         }
         
         if let header = header {
             view.insertSubview(collectionView, belowSubview: header)
-        } else {
-            view.addSubview(collectionView)
+        } else if let banner = banner {
+            view.insertSubview(collectionView, belowSubview: banner)
         }
         
         NSLayoutConstraint.activate([
@@ -138,6 +163,7 @@ extension CollectionViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         header?.layer.transform = CATransform3DMakeTranslation(0, -scrollView.contentOffset.y - scrollView.contentInset.top, 0)
+        banner?.layer.transform = CATransform3DMakeTranslation(0, -scrollView.contentOffset.y - scrollView.contentInset.top, 0)
     }
 }
 

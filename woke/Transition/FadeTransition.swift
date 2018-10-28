@@ -37,7 +37,7 @@ class FadeTransition: TransitionAnimation {
     func setup(in operationContext: TransitionOperationContext) {
         self.operationContext = operationContext
         context = operationContext.context
-        context.containerView.backgroundColor = UIColor(red: 82.0/255.0, green: 77.0/255.0, blue: 153.0/255.0, alpha: 1.0)
+        context.containerView.backgroundColor = UIColor.white
         context.toView.frame = context.finalFrame(for: context.toViewController)
         if isPresenting {
             context.containerView.addSubview(context.toView)

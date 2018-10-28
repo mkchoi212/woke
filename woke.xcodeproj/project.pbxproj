@@ -24,6 +24,8 @@
 		BAB2766A1E76A3A700C1EB95 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB276661E76A3A700C1EB95 /* CollectionViewController.swift */; };
 		BAB2766B1E76A3A700C1EB95 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */; };
 		BAB2766D1E76DA2800C1EB95 /* Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB2766C1E76DA2800C1EB95 /* Convenience.swift */; };
+		CA7B9F70218641440090044E /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */; };
+		CA7B9F72218641610090044E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B9F71218641610090044E /* DateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		BAB276661E76A3A700C1EB95 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		BAB2766C1E76DA2800C1EB95 /* Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convenience.swift; sourceTree = "<group>"; };
+		CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA7B9F71218641610090044E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		CD74992EBF132EDACF8E8096 /* Pods-woke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-woke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-woke/Pods-woke.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +83,7 @@
 				2D9B6A5E1E42108800E6CB48 /* Router.swift */,
 				2D9B6A601E4210CD00E6CB48 /* Location.swift */,
 				BAB276611E76A38F00C1EB95 /* Item.swift */,
+				CA7B9F71218641610090044E /* DateManager.swift */,
 				BAB276631E76A3A700C1EB95 /* CollectionView */,
 			);
 			path = App;
@@ -128,6 +133,7 @@
 				BAB276661E76A3A700C1EB95 /* CollectionViewController.swift */,
 				BAB276651E76A3A700C1EB95 /* CollectionViewController+Transition.swift */,
 				BAB276641E76A3A700C1EB95 /* CollectionViewCell.swift */,
+				CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */,
 				BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */,
 			);
 			path = CollectionView;
@@ -182,7 +188,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = CocoaPods;
+				ORGANIZATIONNAME = "Mike Choi";
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -271,6 +277,7 @@
 				BAB2766A1E76A3A700C1EB95 /* CollectionViewController.swift in Sources */,
 				BAB2766D1E76DA2800C1EB95 /* Convenience.swift in Sources */,
 				2D9B6A5D1E42108000E6CB48 /* AppDelegate.swift in Sources */,
+				CA7B9F72218641610090044E /* DateManager.swift in Sources */,
 				2D2B777F1E3A49880059D762 /* InteractiveZoomTransition.swift in Sources */,
 				BAB2766B1E76A3A700C1EB95 /* CollectionViewLayout.swift in Sources */,
 				BAB276621E76A38F00C1EB95 /* Item.swift in Sources */,
@@ -278,6 +285,7 @@
 				2D81B0C41E65B69700D96A11 /* TransitionStyle.swift in Sources */,
 				BAB276681E76A3A700C1EB95 /* CollectionViewCell.swift in Sources */,
 				2D2B77811E3A49B70059D762 /* FadeTransition.swift in Sources */,
+				CA7B9F70218641440090044E /* HeaderCollectionViewCell.swift in Sources */,
 				2D9B6A5F1E42108800E6CB48 /* Router.swift in Sources */,
 				2D2B77831E3A49D00059D762 /* InteractiveZoomTransitionController.swift in Sources */,
 			);
