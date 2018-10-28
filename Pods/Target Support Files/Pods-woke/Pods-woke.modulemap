@@ -1,0 +1,6 @@
+framework module Pods_woke {
+  umbrella header "Pods-woke-umbrella.h"
+
+  export *
+  module * { export * }
+}
