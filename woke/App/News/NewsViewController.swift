@@ -9,22 +9,22 @@
 import UIKit
 import GTSheet
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, HalfSheetPresentableProtocol{
     static let identifier = "NewsVC"
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-}
-
-extension NewsViewController: HalfSheetAppearanceProtocol {
-    var cornerRadius: CGFloat {
-        return 8.0
+    
+    var topVCTransitionStyle: HalfSheetTopVCTransitionStyle {
+        return .slide
     }
-}
-
-extension NewsViewController: HalfSheetPresentableProtocol {
+    
+    lazy var topVC: UIViewController = {
+        return DismissBarVC.instance(tintColor: .white)
+    }()
+    
     var managedScrollView: UIScrollView? {
         return scrollView
     }
@@ -34,6 +34,12 @@ extension NewsViewController: HalfSheetPresentableProtocol {
     }
     
     var sheetHeight: CGFloat? {
-        return nil
+        return UIScreen.main.bounds.height * 0.90
+    }
+}
+
+extension NewsViewController: HalfSheetAppearanceProtocol, HalfSheetTopVCProviderProtocol {
+    var cornerRadius: CGFloat {
+        return 8.0
     }
 }
