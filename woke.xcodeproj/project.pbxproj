@@ -113,20 +113,6 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
-		2D9B6A5B1E42108000E6CB48 /* App */ = {
-			isa = PBXGroup;
-			children = (
-				2D9B6A5C1E42108000E6CB48 /* AppDelegate.swift */,
-				2D9B6A5E1E42108800E6CB48 /* Router.swift */,
-				2D9B6A601E4210CD00E6CB48 /* Location.swift */,
-				BAB276611E76A38F00C1EB95 /* Item.swift */,
-				CA7B9F71218641610090044E /* DateManager.swift */,
-				CAF51EBB2186BBA200E7B110 /* News */,
-				BAB276631E76A3A700C1EB95 /* CollectionView */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -150,9 +136,15 @@
 			isa = PBXGroup;
 			children = (
 				BAB2766C1E76DA2800C1EB95 /* Convenience.swift */,
-				CA178EBC21877A5B004AD54B /* Fav Button */,
-				2D9B6A5B1E42108000E6CB48 /* App */,
+				2D9B6A5C1E42108000E6CB48 /* AppDelegate.swift */,
+				2D9B6A5E1E42108800E6CB48 /* Router.swift */,
+				2D9B6A601E4210CD00E6CB48 /* Location.swift */,
+				BAB276611E76A38F00C1EB95 /* Item.swift */,
+				CA7B9F71218641610090044E /* DateManager.swift */,
+				CAF51EBB2186BBA200E7B110 /* News */,
+				BAB276631E76A3A700C1EB95 /* CollectionView */,
 				2D2B777D1E3A49760059D762 /* Transition */,
+				CA178EBC21877A5B004AD54B /* Fav Button */,
 				BAE314AD1E76983000CB3F00 /* Resources */,
 			);
 			path = woke;
