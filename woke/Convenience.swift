@@ -24,9 +24,7 @@
 
 import UIKit
 
-
 extension UIView {
-    
     func snapshot() -> UIImageView {
         return UIImageView(image: asImage())
     }
@@ -48,5 +46,11 @@ extension CGPoint {
 extension CGVector {
     var magnitude: CGFloat {
         return sqrt(dx*dx + dy*dy)
+    }
+}
+
+extension Collection {
+    subscript (safe index: Index) -> Iterator.Element? {
+        return index >= startIndex && index < endIndex ? self[index] : nil
     }
 }

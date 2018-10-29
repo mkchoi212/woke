@@ -91,6 +91,7 @@
 				2D2B77801E3A49B70059D762 /* FadeTransition.swift */,
 				2D2B77821E3A49D00059D762 /* InteractiveZoomTransitionController.swift */,
 				2D2B77891E3F3BFE0059D762 /* ZoomTransitionItem.swift */,
+				2D81B0C31E65B69700D96A11 /* TransitionStyle.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -131,10 +132,9 @@
 		607FACD21AFB9204008FA782 /* woke */ = {
 			isa = PBXGroup;
 			children = (
+				BAB2766C1E76DA2800C1EB95 /* Convenience.swift */,
 				2D9B6A5B1E42108000E6CB48 /* App */,
 				2D2B777D1E3A49760059D762 /* Transition */,
-				2D81B0C31E65B69700D96A11 /* TransitionStyle.swift */,
-				BAB2766C1E76DA2800C1EB95 /* Convenience.swift */,
 				BAE314AD1E76983000CB3F00 /* Resources */,
 			);
 			path = woke;

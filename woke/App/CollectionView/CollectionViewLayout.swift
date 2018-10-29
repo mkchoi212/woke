@@ -24,12 +24,10 @@
 
 import UIKit
 
-
 protocol CollectionViewLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath, withWidth: CGFloat) -> CGFloat
     func collectionView(_ collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat
 }
-
 
 class CollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
     

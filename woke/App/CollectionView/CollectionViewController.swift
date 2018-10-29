@@ -1,26 +1,10 @@
 //
-//    MIT License
+//  CollectionViewController.swift
+//  woke
 //
-//    Copyright (c) 2017 Touchwonders B.V.
+//  Created by Mike Choi on 10/28/18.
+//  Copyright © 2018 Mike Choi. All rights reserved.
 //
-//    Permission is hereby granted, free of charge, to any person obtaining a copy
-//    of this software and associated documentation files (the "Software"), to deal
-//    in the Software without restriction, including without limitation the rights
-//    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//    copies of the Software, and to permit persons to whom the Software is
-//    furnished to do so, subject to the following conditions:
-//
-//    The above copyright notice and this permission notice shall be included in all
-//    copies or substantial portions of the Software.
-//
-//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//    SOFTWARE.
-
 
 import UIKit
 import AVFoundation
@@ -69,14 +53,14 @@ class CollectionViewController: UIViewController {
         if let selected = selected {
             let margin = type(of: self).margin
             
-            header = CollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            header = CollectionViewCell(frame: .zero)
             guard let header = header else { return }
             header.translatesAutoresizingMaskIntoConstraints = false
             header.item = selected
             header.container.backgroundColor = nil
             header.image.layer.cornerRadius = 6
             header.titleLabel.font = UIFont.systemFont(ofSize: 16)
-            header.titleLabel.textColor = .white
+            header.titleLabel.textColor = .black
             view.addSubview(header)
             
             let boundingRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - (2 * margin), height: CGFloat(MAXFLOAT))
@@ -128,7 +112,7 @@ class CollectionViewController: UIViewController {
         }
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
             collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
@@ -176,7 +160,6 @@ extension CollectionViewController: UICollectionViewDataSource, UIScrollViewDele
 extension CollectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         guard let item = items[safe: indexPath.item] else {
             return
         }
@@ -193,7 +176,6 @@ extension CollectionViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
         if let cell = cell as? CollectionViewCell, let item = items[safe: indexPath.item] {
             cell.item = item
         }
@@ -206,16 +188,13 @@ extension CollectionViewController: CollectionViewLayoutDelegate {
         let item = items[indexPath.item]
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
         let rect = AVMakeRect(aspectRatio: item.image.size, insideRect: boundingRect)
-        
         return rect.height
     }
     
     func collectionView(_ collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
-        
         let item = items[indexPath.item]
         let font = UIFont.systemFont(ofSize: 12)
         let height = item.heightForTitle(font, width: width)
-        
         return height + 20
     }
 }
@@ -223,18 +202,9 @@ extension CollectionViewController: CollectionViewLayoutDelegate {
 extension CollectionViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        
         if let navigationController = app?.router.navigationController {
             return navigationController.viewControllers.count > 1
         }
-        
         return false
-    }
-}
-
-extension Collection {
-    
-    subscript (safe index: Index) -> Iterator.Element? {
-        return index >= startIndex && index < endIndex ? self[index] : nil
     }
 }

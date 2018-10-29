@@ -1,25 +1,10 @@
 //
-//    MIT License
+//  CollectionViewCell.swift
+//  woke
 //
-//    Copyright (c) 2017 Touchwonders B.V.
+//  Created by Mike Choi on 10/28/18.
+//  Copyright © 2018 Mike Choi. All rights reserved.
 //
-//    Permission is hereby granted, free of charge, to any person obtaining a copy
-//    of this software and associated documentation files (the "Software"), to deal
-//    in the Software without restriction, including without limitation the rights
-//    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-//    copies of the Software, and to permit persons to whom the Software is
-//    furnished to do so, subject to the following conditions:
-//
-//    The above copyright notice and this permission notice shall be included in all
-//    copies or substantial portions of the Software.
-//
-//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-//    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-//    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-//    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-//    SOFTWARE.
 
 import UIKit
 import Transition
@@ -82,6 +67,7 @@ class CollectionViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             image.topAnchor.constraint(equalTo: container.topAnchor, constant: 0),
             image.leftAnchor.constraint(equalTo: container.leftAnchor, constant: 0),
+            image.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -20),
             image.rightAnchor.constraint(equalTo: container.rightAnchor, constant: 0)
             ])
         
@@ -91,7 +77,7 @@ class CollectionViewCell: UICollectionViewCell {
             titleLabel.topAnchor.constraint(equalTo: image.bottomAnchor, constant: 5),
             titleLabel.leftAnchor.constraint(equalTo: container.leftAnchor),
             titleLabel.rightAnchor.constraint(equalTo: container.rightAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: -15)
+            titleLabel.bottomAnchor.constraint(equalTo: container.bottomAnchor, constant: 0)
             ])
     }
 }

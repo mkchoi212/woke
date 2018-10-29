@@ -26,7 +26,6 @@ import UIKit
 
 
 class Item {
-    
     class func allItems() -> [Item] {
         var items = [Item]()
         if let URL = Bundle.main.url(forResource: "Items", withExtension: "plist") {
@@ -76,15 +75,10 @@ class Item {
 
 extension Item : Equatable {}
 
-
 extension UIImage {
-    
     static func random(i: Int) -> UIImage? {
-        
         let index = i % 4
-        
         let height: CGFloat = 150 + CGFloat(arc4random_uniform(250))
-        
         let rect = CGRect(x: 0, y: 0, width: 300, height: height)
         UIGraphicsBeginImageContext(rect.size)
         
