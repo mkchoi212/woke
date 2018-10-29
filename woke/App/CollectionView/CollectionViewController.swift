@@ -24,7 +24,7 @@
 
 import UIKit
 import AVFoundation
-
+import GTSheet
 
 class CollectionViewController: UIViewController {
     
@@ -35,8 +35,9 @@ class CollectionViewController: UIViewController {
     var selectedImage: UIImageView?
     var header: CollectionViewCell?
     var banner: CollectionViewCell?
-    
     var targetFrame: CGRect = .zero
+    
+    var transitionManager: HalfSheetPresentationManager!
     
     lazy var collectionView: UICollectionView = {
         var layout = CollectionViewLayout()
@@ -148,7 +149,15 @@ class CollectionViewController: UIViewController {
     }
 }
 
-extension CollectionViewController: UICollectionViewDataSource {
+extension CollectionViewController: HalfSheetPresentingProtocol {
+    func display(item: Item) {
+        presentUsingHalfSheet(
+            UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "NewsNC")
+        )
+    }
+}
+
+extension CollectionViewController: UICollectionViewDataSource, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
@@ -157,9 +166,6 @@ extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier, for: indexPath)
     }
-}
-
-extension CollectionViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         header?.layer.transform = CATransform3DMakeTranslation(0, -scrollView.contentOffset.y - scrollView.contentInset.top, 0)
@@ -171,15 +177,18 @@ extension CollectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if let item = items[safe: indexPath.item] {
-            
+        guard let item = items[safe: indexPath.item] else {
+            return
+        }
+        
+        if selected == nil {
             if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
                 targetFrame = view.convert(cell.image.frame, from: cell.image)
                 selectedImage = cell.image
-                
             }
-            
             app?.router.go(to: .collection(item))
+        } else {
+            display(item: item)
         }
     }
     
@@ -191,7 +200,7 @@ extension CollectionViewController: UICollectionViewDelegate {
     }
 }
 
-extension CollectionViewController : CollectionViewLayoutDelegate {
+extension CollectionViewController: CollectionViewLayoutDelegate {
     
     func collectionView(_ collectionView:UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
         let item = items[indexPath.item]
@@ -211,13 +220,6 @@ extension CollectionViewController : CollectionViewLayoutDelegate {
     }
 }
 
-extension Collection {
-    
-    subscript (safe index: Index) -> Iterator.Element? {
-        return index >= startIndex && index < endIndex ? self[index] : nil
-    }
-}
-
 extension CollectionViewController: UIGestureRecognizerDelegate {
     
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -227,5 +229,12 @@ extension CollectionViewController: UIGestureRecognizerDelegate {
         }
         
         return false
+    }
+}
+
+extension Collection {
+    
+    subscript (safe index: Index) -> Iterator.Element? {
+        return index >= startIndex && index < endIndex ? self[index] : nil
     }
 }
