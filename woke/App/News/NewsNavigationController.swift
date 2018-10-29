@@ -31,6 +31,6 @@ extension NewsNavigationController: HalfSheetPresentableProtocol {
     }
     
     var sheetHeight: CGFloat? {
-        return 396.0
+        return UIScreen.main.bounds.height * 0.9
     }
 }

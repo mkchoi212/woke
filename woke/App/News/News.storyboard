@@ -15,11 +15,11 @@
             <objects>
                 <viewController storyboardIdentifier="NewsVC" id="ESc-0l-l2t" userLabel="NewsViewController" customClass="NewsViewController" customModule="woke" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MEb-s9-cAH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-nW-vxB">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <rect key="frame" x="8" y="8" width="359" height="587"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-sJ-jND">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="2314.5"/>
@@ -51,7 +51,7 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m44-O9-Vuc" userLabel="Main Text">
                                                 <rect key="frame" x="0.0" y="164" width="359" height="2150.5"/>
-                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ante in nibh mauris cursus mattis molestie. Sed vulputate odio ut enim blandit. Morbi tristique senectus et netus et malesuada fames ac. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Imperdiet massa tincidunt nunc pulvinar sapien et ligula. Dui id ornare arcu odio. Mi proin sed libero enim sed faucibus turpis in. Sed id semper risus in hendrerit. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Amet consectetur adipiscing elit duis tristique. Vel pharetra vel turpis nunc eget. Dolor purus non enim praesent elementum facilisis leo vel fringilla. Nec feugiat nisl pretium fusce id velit. Nec feugiat in fermentum posuere urna nec tincidunt praesent semper. Sapien nec sagittis aliquam malesuada bibendum arcu. Dui id ornare arcu odio. In fermentum posuere urna nec tincidunt praesent semper. Nunc faucibus a pellentesque sit.
+                                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ante in nibh mauris cursus mattis molestie. Sed vulputate odio ut enim blandit. Morbi tristique senectus et netus et malesuada fames ac. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Imperdiet massa tincidunt nunc pulvinar sapien et ligula. Dui id ornare arcu odio. Mi proin sed libero enim sed faucibus turpis in. Sed id semper risus in hendrerit. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Amet consectetur adipiscing elit duis tristique. Vel pharetra vel turpis nunc eget. Dolor purus non enim praesent elementum facilisis leo vel fringilla. Nec feugiat nisl pretium fusce id velit. Nec feugiat in fermentum posuere urna nec tincidunt praesent semper. Sapien nec sagittis aliquam malesuada bibendum arcu. Dui id ornare arcu odio. In fermentum posuere urna nec tincidunt praesent semper. Nunc faucibus a pellentesque sit.
 
 Tellus pellentesque eu tincidunt tortor aliquam nulla. Nulla porttitor massa id neque aliquam vestibulum. Adipiscing at in tellus integer. Enim nunc faucibus a pellentesque sit amet porttitor eget. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Tristique magna sit amet purus gravida quis blandit turpis. Senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada. Pulvinar etiam non quam lacus suspendisse faucibus interdum. Orci porta non pulvinar neque laoreet suspendisse interdum. Purus sit amet luctus venenatis. Aliquet sagittis id consectetur purus ut faucibus. Adipiscing elit ut aliquam purus sit amet. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vulputate eu scelerisque felis imperdiet proin fermentum leo. Tristique risus nec feugiat in fermentum. Adipiscing diam donec adipiscing tristique risus. Pharetra pharetra massa massa ultricies mi quis hendrerit. Id interdum velit laoreet id donec ultrices. Non odio euismod lacinia at quis risus sed.
 
@@ -59,7 +59,7 @@ Nibh nisl condimentum id venenatis a condimentum vitae. Fames ac turpis egestas 
 
 Massa vitae tortor condimentum lacinia quis. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Convallis a cras semper auctor neque. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Diam in arcu cursus euismod quis. Sed risus pretium quam vulputate dignissim. Turpis egestas pretium aenean pharetra magna ac. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Arcu dui vivamus arcu felis bibendum ut. Nulla aliquet enim tortor at. Ac tortor vitae purus faucibus ornare suspendisse. Malesuada fames ac turpis egestas integer eget aliquet. Ornare quam viverra orci sagittis. Fames ac turpis egestas sed tempus urna et pharetra pharetra. Orci eu lobortis elementum nibh tellus molestie nunc non blandit. Varius quam quisque id diam. Tellus id interdum velit laoreet. Mattis ullamcorper velit sed ullamcorper. Placerat vestibulum lectus mauris ultrices eros in.
 
-Faucibus turpis in eu mi bibendum. Blandit turpis cursus in hac habitasse platea dictumst quisque. Tellus mauris a diam maecenas sed enim ut. Felis eget nunc lobortis mattis aliquam. Sit amet justo donec enim diam vulputate ut. Pretium quam vulputate dignissim suspendisse. Cursus mattis molestie a iaculis. Sed tempus urna et pharetra pharetra massa massa ultricies. Et odio pellentesque diam volutpat commodo sed egestas. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum.</mutableString>
+Faucibus turpis in eu mi bibendum. Blandit turpis cursus in hac habitasse platea dictumst quisque. Tellus mauris a diam maecenas sed enim ut. Felis eget nunc lobortis mattis aliquam. Sit amet justo donec enim diam vulputate ut. Pretium quam vulputate dignissim suspendisse. Cursus mattis molestie a iaculis. Sed tempus urna et pharetra pharetra massa massa ultricies. Et odio pellentesque diam volutpat commodo sed egestas. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -92,36 +92,35 @@ Faucibus turpis in eu mi bibendum. Blandit turpis cursus in hac habitasse platea
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Upx-J0-kr5"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title here" id="I2u-nx-oaV"/>
+                    <navigationItem key="navigationItem" id="I2u-nx-oaV"/>
                     <connections>
                         <outlet property="authorLabel" destination="5cf-HS-4eh" id="Avn-IA-5l0"/>
                         <outlet property="dateLabel" destination="5rp-FE-pTL" id="e3f-eM-Eak"/>
                         <outlet property="mainTextLabel" destination="m44-O9-Vuc" id="3Vw-3c-7Ic"/>
-                        <outlet property="scrollView" destination="qua-OH-Wu8" id="boh-pi-PEf"/>
+                        <outlet property="scrollView" destination="Eja-nW-vxB" id="Bj9-Bt-9Dm"/>
                         <outlet property="titleLabel" destination="Lso-ew-HYh" id="Z5m-lf-Xqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2d-Vh-n1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="qua-OH-Wu8">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46T-Wi-GaL">
-                            <rect key="frame" x="12" y="105.5" width="42" height="21"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="46T-Wi-GaL" firstAttribute="leading" secondItem="qua-OH-Wu8" secondAttribute="leading" constant="12" id="6xe-k4-6yC"/>
-                        <constraint firstAttribute="bottom" secondItem="46T-Wi-GaL" secondAttribute="bottom" constant="12" id="rBu-lu-FYW"/>
-                        <constraint firstAttribute="trailing" secondItem="46T-Wi-GaL" secondAttribute="trailing" constant="12" id="t1P-Jh-Zyb"/>
-                    </constraints>
-                    <viewLayoutGuide key="safeArea" id="bwD-nx-Jv6"/>
-                </scrollView>
             </objects>
-            <point key="canvasLocation" x="1592.8" y="195.6521739130435"/>
+            <point key="canvasLocation" x="1591" y="-11"/>
+        </scene>
+        <!--News Navigation Controller-->
+        <scene sceneID="9yN-r6-mbD">
+            <objects>
+                <navigationController storyboardIdentifier="NewsNC" id="Dvo-j5-Tcg" customClass="NewsNavigationController" customModule="woke" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="X2U-CA-kFQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ESc-0l-l2t" kind="relationship" relationship="rootViewController" id="PKo-gV-ckE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgz-B5-8h0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="-11"/>
         </scene>
     </scenes>
 </document>

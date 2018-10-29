@@ -136,7 +136,7 @@ class CollectionViewController: UIViewController {
 extension CollectionViewController: HalfSheetPresentingProtocol {
     func display(item: Item) {
         presentUsingHalfSheet(
-            UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "NewsVC")
+            UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: NewsNavigationController.identifier)
         )
     }
 }
