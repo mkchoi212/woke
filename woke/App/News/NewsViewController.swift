@@ -11,7 +11,12 @@ import GTSheet
 
 class NewsViewController: UIViewController, HalfSheetPresentableProtocol{
     static let identifier = "NewsVC"
+    
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var mainTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

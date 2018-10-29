@@ -10,33 +10,116 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title here-->
+        <!--NewsViewController-->
         <scene sceneID="PMS-Ul-4pY">
             <objects>
-                <viewController storyboardIdentifier="NewsVC" id="ESc-0l-l2t" customClass="NewsViewController" customModule="woke" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewsVC" id="ESc-0l-l2t" userLabel="NewsViewController" customClass="NewsViewController" customModule="woke" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MEb-s9-cAH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qua-OH-Wu8">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eja-nW-vxB">
+                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-sJ-jND">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="2314.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angela Merkel announces she will not seek re-election as German Chancellor" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lso-ew-HYh" userLabel="Title">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="86"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bianca Britton, CNN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cf-HS-4eh" userLabel="Author">
+                                                <rect key="frame" x="0.0" y="98" width="359" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated 9:39 AM EDT October 29, 2018" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rp-FE-pTL" userLabel="Date">
+                                                <rect key="frame" x="0.0" y="124.5" width="359" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoX-AN-1h1" userLabel="Separator">
+                                                <rect key="frame" x="90" y="151" width="179.5" height="1"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="wK8-QU-eET"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m44-O9-Vuc" userLabel="Main Text">
+                                                <rect key="frame" x="0.0" y="164" width="359" height="2150.5"/>
+                                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ante in nibh mauris cursus mattis molestie. Sed vulputate odio ut enim blandit. Morbi tristique senectus et netus et malesuada fames ac. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Imperdiet massa tincidunt nunc pulvinar sapien et ligula. Dui id ornare arcu odio. Mi proin sed libero enim sed faucibus turpis in. Sed id semper risus in hendrerit. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Amet consectetur adipiscing elit duis tristique. Vel pharetra vel turpis nunc eget. Dolor purus non enim praesent elementum facilisis leo vel fringilla. Nec feugiat nisl pretium fusce id velit. Nec feugiat in fermentum posuere urna nec tincidunt praesent semper. Sapien nec sagittis aliquam malesuada bibendum arcu. Dui id ornare arcu odio. In fermentum posuere urna nec tincidunt praesent semper. Nunc faucibus a pellentesque sit.
+
+Tellus pellentesque eu tincidunt tortor aliquam nulla. Nulla porttitor massa id neque aliquam vestibulum. Adipiscing at in tellus integer. Enim nunc faucibus a pellentesque sit amet porttitor eget. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Tristique magna sit amet purus gravida quis blandit turpis. Senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada. Pulvinar etiam non quam lacus suspendisse faucibus interdum. Orci porta non pulvinar neque laoreet suspendisse interdum. Purus sit amet luctus venenatis. Aliquet sagittis id consectetur purus ut faucibus. Adipiscing elit ut aliquam purus sit amet. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vulputate eu scelerisque felis imperdiet proin fermentum leo. Tristique risus nec feugiat in fermentum. Adipiscing diam donec adipiscing tristique risus. Pharetra pharetra massa massa ultricies mi quis hendrerit. Id interdum velit laoreet id donec ultrices. Non odio euismod lacinia at quis risus sed.
+
+Nibh nisl condimentum id venenatis a condimentum vitae. Fames ac turpis egestas maecenas pharetra. Pellentesque elit ullamcorper dignissim cras tincidunt. Vel pharetra vel turpis nunc eget lorem. Auctor augue mauris augue neque gravida. Massa ultricies mi quis hendrerit dolor magna eget est. In vitae turpis massa sed elementum tempus egestas sed. Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Faucibus a pellentesque sit amet porttitor. Sit amet est placerat in egestas erat. Nunc aliquet bibendum enim facilisis. Erat velit scelerisque in dictum non consectetur. Placerat in egestas erat imperdiet. Interdum posuere lorem ipsum dolor sit. Aenean euismod elementum nisi quis eleifend quam adipiscing. Ultrices gravida dictum fusce ut placerat. Lacus sed viverra tellus in.
+
+Massa vitae tortor condimentum lacinia quis. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Convallis a cras semper auctor neque. Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam. Diam in arcu cursus euismod quis. Sed risus pretium quam vulputate dignissim. Turpis egestas pretium aenean pharetra magna ac. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Arcu dui vivamus arcu felis bibendum ut. Nulla aliquet enim tortor at. Ac tortor vitae purus faucibus ornare suspendisse. Malesuada fames ac turpis egestas integer eget aliquet. Ornare quam viverra orci sagittis. Fames ac turpis egestas sed tempus urna et pharetra pharetra. Orci eu lobortis elementum nibh tellus molestie nunc non blandit. Varius quam quisque id diam. Tellus id interdum velit laoreet. Mattis ullamcorper velit sed ullamcorper. Placerat vestibulum lectus mauris ultrices eros in.
+
+Faucibus turpis in eu mi bibendum. Blandit turpis cursus in hac habitasse platea dictumst quisque. Tellus mauris a diam maecenas sed enim ut. Felis eget nunc lobortis mattis aliquam. Sit amet justo donec enim diam vulputate ut. Pretium quam vulputate dignissim suspendisse. Cursus mattis molestie a iaculis. Sed tempus urna et pharetra pharetra massa massa ultricies. Et odio pellentesque diam volutpat commodo sed egestas. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="5cf-HS-4eh" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="0R8-fM-M20"/>
+                                            <constraint firstItem="m44-O9-Vuc" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="HQz-Ev-dta"/>
+                                            <constraint firstItem="aoX-AN-1h1" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" multiplier="0.5" id="IFB-3b-Zgx"/>
+                                            <constraint firstItem="5rp-FE-pTL" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="X2Q-pk-VSd"/>
+                                            <constraint firstItem="Lso-ew-HYh" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="e40-69-rs0"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="rFb-sJ-jND" secondAttribute="bottom" id="01c-em-UMQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rFb-sJ-jND" secondAttribute="trailing" id="I6e-n8-aSX"/>
+                                    <constraint firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="MiI-W8-lWQ"/>
+                                    <constraint firstItem="rFb-sJ-jND" firstAttribute="leading" secondItem="Eja-nW-vxB" secondAttribute="leading" id="fRM-Kn-1Hd"/>
+                                    <constraint firstItem="rFb-sJ-jND" firstAttribute="top" secondItem="Eja-nW-vxB" secondAttribute="top" id="nz5-dF-J3G"/>
+                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qua-OH-Wu8" firstAttribute="leading" secondItem="Upx-J0-kr5" secondAttribute="leading" id="8JH-EM-FDf"/>
-                            <constraint firstItem="qua-OH-Wu8" firstAttribute="bottom" secondItem="Upx-J0-kr5" secondAttribute="bottom" id="LxF-Gn-0UQ"/>
-                            <constraint firstItem="qua-OH-Wu8" firstAttribute="top" secondItem="Upx-J0-kr5" secondAttribute="top" id="NoQ-vX-LX3"/>
-                            <constraint firstItem="qua-OH-Wu8" firstAttribute="trailing" secondItem="Upx-J0-kr5" secondAttribute="trailing" id="eDP-s6-fyg"/>
+                            <constraint firstItem="Eja-nW-vxB" firstAttribute="leading" secondItem="Upx-J0-kr5" secondAttribute="leading" constant="8" id="7JP-5O-kj4"/>
+                            <constraint firstItem="Upx-J0-kr5" firstAttribute="bottom" secondItem="Eja-nW-vxB" secondAttribute="bottom" constant="8" id="QBn-7i-J6y"/>
+                            <constraint firstItem="Eja-nW-vxB" firstAttribute="top" secondItem="Upx-J0-kr5" secondAttribute="top" constant="8" id="TYx-aa-3S1"/>
+                            <constraint firstItem="Upx-J0-kr5" firstAttribute="trailing" secondItem="Eja-nW-vxB" secondAttribute="trailing" constant="8" id="VWQ-op-gw0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Upx-J0-kr5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title here" id="I2u-nx-oaV"/>
                     <connections>
+                        <outlet property="authorLabel" destination="5cf-HS-4eh" id="Avn-IA-5l0"/>
+                        <outlet property="dateLabel" destination="5rp-FE-pTL" id="e3f-eM-Eak"/>
+                        <outlet property="mainTextLabel" destination="m44-O9-Vuc" id="3Vw-3c-7Ic"/>
                         <outlet property="scrollView" destination="qua-OH-Wu8" id="boh-pi-PEf"/>
+                        <outlet property="titleLabel" destination="Lso-ew-HYh" id="Z5m-lf-Xqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2d-Vh-n1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="qua-OH-Wu8">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46T-Wi-GaL">
+                            <rect key="frame" x="12" y="105.5" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="46T-Wi-GaL" firstAttribute="leading" secondItem="qua-OH-Wu8" secondAttribute="leading" constant="12" id="6xe-k4-6yC"/>
+                        <constraint firstAttribute="bottom" secondItem="46T-Wi-GaL" secondAttribute="bottom" constant="12" id="rBu-lu-FYW"/>
+                        <constraint firstAttribute="trailing" secondItem="46T-Wi-GaL" secondAttribute="trailing" constant="12" id="t1P-Jh-Zyb"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="bwD-nx-Jv6"/>
+                </scrollView>
             </objects>
             <point key="canvasLocation" x="1592.8" y="195.6521739130435"/>
         </scene>
