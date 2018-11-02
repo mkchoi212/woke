@@ -23,11 +23,20 @@ class CollectionViewController: UIViewController {
     
     var transitionManager: HalfSheetPresentationManager!
     
-    lazy var collectionView: UICollectionView = {
+    lazy var homeLayout: UICollectionViewLayout = {
         var layout = CollectionViewLayout()
         layout.delegate = self
-        
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        return layout
+    }()
+    
+    lazy var articleLayout: UICollectionViewLayout = {
+        var layout = ArticleViewLayout()
+        layout.delegate = self
+        return layout
+    }()
+    
+    lazy var collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: homeLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = nil
         collectionView.alwaysBounceVertical = true
@@ -49,8 +58,6 @@ class CollectionViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = UIColor.white
         navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        
         
         if let selected = selected {
             let margin = type(of: self).margin
@@ -79,6 +86,7 @@ class CollectionViewController: UIViewController {
                 header.heightAnchor.constraint(equalToConstant: height)
                 ])
             
+            collectionView.collectionViewLayout = articleLayout
             header.layoutIfNeeded()
             view.layoutIfNeeded()
         } else {
@@ -103,6 +111,7 @@ class CollectionViewController: UIViewController {
                 banner.heightAnchor.constraint(equalToConstant: height)
                 ])
             
+            collectionView.collectionViewLayout = homeLayout
             banner.layoutIfNeeded()
             view.layoutIfNeeded()
         }

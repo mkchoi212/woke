@@ -56,9 +56,9 @@ class CollectionViewLayout: UICollectionViewLayout {
     var numberOfColumns = 2
     var cellPadding: CGFloat = 6.0
     
-    private var cache = [CollectionViewLayoutAttributes]()
-    private var contentHeight: CGFloat  = 0.0
-    private var contentWidth: CGFloat {
+    var cache = [CollectionViewLayoutAttributes]()
+    var contentHeight: CGFloat  = 0.0
+    var contentWidth: CGFloat {
         let insets = collectionView!.contentInset
         return collectionView!.bounds.width - (insets.left + insets.right)
     }
