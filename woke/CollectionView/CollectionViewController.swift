@@ -45,6 +45,7 @@ class CollectionViewController: UIViewController {
         collectionView.contentInset = UIEdgeInsets(top: 5, left: 5, bottom: 10, right: 5)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
+        collectionView.register(ArticleCollectionViewCell.self, forCellWithReuseIdentifier: ArticleCollectionViewCell.reuseIdentifier)
         return collectionView
     }()
     
@@ -159,7 +160,8 @@ extension CollectionViewController: UICollectionViewDataSource, UIScrollViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier, for: indexPath)
+        let identifier = selected == nil ? CollectionViewCell.reuseIdentifier: ArticleCollectionViewCell.reuseIdentifier
+        return collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -176,7 +178,7 @@ extension CollectionViewController: UICollectionViewDelegate {
         }
         
         if selected == nil {
-            if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
+            if let cell = collectionView.cellForItem(at: indexPath) as? Displayable {
                 targetFrame = view.convert(cell.image.frame, from: cell.image)
                 selectedImage = cell.image
             }
@@ -187,7 +189,7 @@ extension CollectionViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if let cell = cell as? CollectionViewCell, let item = items[safe: indexPath.item] {
+        if var cell = cell as? Displayable, let item = items[safe: indexPath.item] {
             cell.item = item
         }
     }
@@ -198,8 +200,14 @@ extension CollectionViewController: CollectionViewLayoutDelegate {
     func collectionView(_ collectionView:UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
         let item = items[indexPath.item]
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
+   
         let rect = AVMakeRect(aspectRatio: item.image.size, insideRect: boundingRect)
-        return rect.height
+        if selected == nil {
+            return rect.height
+        } else {
+            let font = UIFont.systemFont(ofSize: 12)
+            return max(item.heightForTitle(font, width: width), ArticleCollectionViewCell.imageSize)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {

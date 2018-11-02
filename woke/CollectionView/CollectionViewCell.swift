@@ -7,9 +7,13 @@
 //
 
 import UIKit
-import Transition
 
-class CollectionViewCell: UICollectionViewCell {
+protocol Displayable {
+    var item: Item? { get set }
+    var image: UIImageView { get set }
+}
+
+class CollectionViewCell: UICollectionViewCell, Displayable {
     
     static let reuseIdentifier = "CollectionViewCell"
     

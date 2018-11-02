@@ -34,6 +34,7 @@
 		CA178ECD21877A6B004AD54B /* FaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EC521877A6B004AD54B /* FaveIcon.swift */; };
 		CA178ECE21877A6B004AD54B /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EC621877A6B004AD54B /* Spark.swift */; };
 		CA3DA881218CCABA00503D65 /* ArticleViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DA880218CCABA00503D65 /* ArticleViewLayout.swift */; };
+		CA3DA883218CCBE400503D65 /* ArticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DA882218CCBE400503D65 /* ArticleCollectionViewCell.swift */; };
 		CA7B9F70218641440090044E /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */; };
 		CA7B9F72218641610090044E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B9F71218641610090044E /* DateManager.swift */; };
 		CAAA27AC218BD627001DA28E /* GTSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA27A5218BD601001DA28E /* GTSheet.framework */; };
@@ -105,6 +106,7 @@
 		CA178EC521877A6B004AD54B /* FaveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveIcon.swift; sourceTree = "<group>"; };
 		CA178EC621877A6B004AD54B /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		CA3DA880218CCABA00503D65 /* ArticleViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewLayout.swift; sourceTree = "<group>"; };
+		CA3DA882218CCBE400503D65 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA7B9F71218641610090044E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		CAAA27A0218BD601001DA28E /* GTSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GTSheet.xcodeproj; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				BAB276661E76A3A700C1EB95 /* CollectionViewController.swift */,
 				BAB276651E76A3A700C1EB95 /* CollectionViewController+Transition.swift */,
 				BAB276641E76A3A700C1EB95 /* CollectionViewCell.swift */,
+				CA3DA882218CCBE400503D65 /* ArticleCollectionViewCell.swift */,
 				CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */,
 				BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */,
 				CA3DA880218CCABA00503D65 /* ArticleViewLayout.swift */,
@@ -412,6 +415,7 @@
 				BAB2766B1E76A3A700C1EB95 /* CollectionViewLayout.swift in Sources */,
 				CA178EC821877A6B004AD54B /* Geometry.swift in Sources */,
 				CA178EC721877A6B004AD54B /* FaveButton.swift in Sources */,
+				CA3DA883218CCBE400503D65 /* ArticleCollectionViewCell.swift in Sources */,
 				BAB276621E76A38F00C1EB95 /* Item.swift in Sources */,
 				CA178ECC21877A6B004AD54B /* Ring.swift in Sources */,
 				2D2B778A1E3F3BFE0059D762 /* ZoomTransitionItem.swift in Sources */,

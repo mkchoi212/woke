@@ -22,7 +22,7 @@ class ArticleViewLayout: CollectionViewLayout {
                 xOffset.append(CGFloat(column) * columnWidth )
             }
             
-            var column = 0
+            let column = 0
             var yOffset = [CGFloat](repeating: 0, count: numberOfColumns)
             
             for item in 0 ..< collectionView!.numberOfItems(inSection: 0) {
@@ -30,8 +30,7 @@ class ArticleViewLayout: CollectionViewLayout {
                 let width = columnWidth - cellPadding * 2
                 let itemHeight = delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath, withWidth:width)
                 
-                let annotationHeight = delegate.collectionView(collectionView!, heightForAnnotationAtIndexPath: indexPath, withWidth: width)
-                let height = cellPadding +  itemHeight + annotationHeight + cellPadding
+                let height = itemHeight
                 let frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: height)
                 let insetFrame = frame.insetBy(dx: cellPadding, dy: cellPadding)
                 
@@ -42,12 +41,6 @@ class ArticleViewLayout: CollectionViewLayout {
                 
                 contentHeight = max(contentHeight, frame.maxY)
                 yOffset[column] = yOffset[column] + height
-                
-                if column >= numberOfColumns - 1 {
-                    column = 0
-                } else {
-                    column = column + 1
-                }
             }
         }
     }
