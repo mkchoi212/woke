@@ -35,20 +35,43 @@
 		CA178ECE21877A6B004AD54B /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EC621877A6B004AD54B /* Spark.swift */; };
 		CA7B9F70218641440090044E /* HeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */; };
 		CA7B9F72218641610090044E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B9F71218641610090044E /* DateManager.swift */; };
+		CAAA27AC218BD627001DA28E /* GTSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA27A5218BD601001DA28E /* GTSheet.framework */; };
+		CAAA27AD218BD627001DA28E /* GTSheet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA27A5218BD601001DA28E /* GTSheet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CAF51EBA2186BB9800E7B110 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF51EB92186BB9800E7B110 /* News.storyboard */; };
 		CAF51EBD2186BBAE00E7B110 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF51EBC2186BBAE00E7B110 /* NewsViewController.swift */; };
 		CAF51EBF2186BC4100E7B110 /* NewsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF51EBE2186BC4100E7B110 /* NewsNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CA178ED221877A95004AD54B /* PBXContainerItemProxy */ = {
+		CAAA27A4218BD601001DA28E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CAF51EB02186B9FE00E7B110 /* GTSheet.xcodeproj */;
+			containerPortal = CAAA27A0218BD601001DA28E /* GTSheet.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6FB0B4D71F75845600A4F6D4;
 			remoteInfo = GTSheet;
 		};
+		CAAA27AE218BD627001DA28E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAAA27A0218BD601001DA28E /* GTSheet.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FB0B4D61F75845600A4F6D4;
+			remoteInfo = GTSheet;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CAAA27B0218BD627001DA28E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CAAA27AD218BD627001DA28E /* GTSheet.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D2B777E1E3A49880059D762 /* InteractiveZoomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveZoomTransition.swift; sourceTree = "<group>"; };
@@ -82,7 +105,7 @@
 		CA178EC621877A6B004AD54B /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA7B9F71218641610090044E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
-		CAF51EB02186B9FE00E7B110 /* GTSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTSheet.xcodeproj; path = woke/GTSheet.xcodeproj; sourceTree = "<group>"; };
+		CAAA27A0218BD601001DA28E /* GTSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GTSheet.xcodeproj; sourceTree = "<group>"; };
 		CAF51EB92186BB9800E7B110 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		CAF51EBC2186BBAE00E7B110 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		CAF51EBE2186BC4100E7B110 /* NewsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNavigationController.swift; sourceTree = "<group>"; };
@@ -95,6 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D4326F94151A8CF068BFE92 /* Pods_woke.framework in Frameworks */,
+				CAAA27AC218BD627001DA28E /* GTSheet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +140,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				CAF51EB02186B9FE00E7B110 /* GTSheet.xcodeproj */,
+				CAAA27A0218BD601001DA28E /* GTSheet.xcodeproj */,
 				607FACD21AFB9204008FA782 /* woke */,
 				607FACD11AFB9204008FA782 /* Products */,
 				D24F1B4B5AC8082492A07EB1 /* Pods */,
@@ -204,10 +228,10 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		CA178ECF21877A95004AD54B /* Products */ = {
+		CAAA27A1218BD601001DA28E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA178ED321877A95004AD54B /* GTSheet.framework */,
+				CAAA27A5218BD601001DA28E /* GTSheet.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,10 +275,12 @@
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
 				C67D4607E3F518C6829D8299 /* [CP] Embed Pods Frameworks */,
+				CAAA27B0218BD627001DA28E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CAAA27AF218BD627001DA28E /* PBXTargetDependency */,
 			);
 			name = woke;
 			productName = Transition;
@@ -291,8 +317,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = CA178ECF21877A95004AD54B /* Products */;
-					ProjectRef = CAF51EB02186B9FE00E7B110 /* GTSheet.xcodeproj */;
+					ProductGroup = CAAA27A1218BD601001DA28E /* Products */;
+					ProjectRef = CAAA27A0218BD601001DA28E /* GTSheet.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -303,11 +329,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		CA178ED321877A95004AD54B /* GTSheet.framework */ = {
+		CAAA27A5218BD601001DA28E /* GTSheet.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = GTSheet.framework;
-			remoteRef = CA178ED221877A95004AD54B /* PBXContainerItemProxy */;
+			remoteRef = CAAA27A4218BD601001DA28E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -400,6 +426,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAAA27AF218BD627001DA28E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTSheet;
+			targetProxy = CAAA27AE218BD627001DA28E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
@@ -504,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD74992EBF132EDACF8E8096 /* Pods-woke.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7J57M62A98;
 				INFOPLIST_FILE = woke/Info.plist;
@@ -520,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61C15207365B5A2ED3417008 /* Pods-woke.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7J57M62A98;
 				INFOPLIST_FILE = woke/Info.plist;

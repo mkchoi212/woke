@@ -43,6 +43,23 @@ extension CGPoint {
     }
 }
 
+extension String {
+    func attributedString(nonBoldRange: NSRange?, fontSize: CGFloat) -> NSAttributedString {
+        let attrs = [
+            NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: fontSize),
+            NSAttributedStringKey.foregroundColor: UIColor.black
+        ]
+        let nonBoldAttribute = [
+            NSAttributedStringKey.font: UIFont.systemFont(ofSize: fontSize),
+            ]
+        let attrStr = NSMutableAttributedString(string: self, attributes: attrs)
+        if let range = nonBoldRange {
+            attrStr.setAttributes(nonBoldAttribute, range: range)
+        }
+        return attrStr
+    }
+}
+
 extension CGVector {
     var magnitude: CGFloat {
         return sqrt(dx*dx + dy*dy)
