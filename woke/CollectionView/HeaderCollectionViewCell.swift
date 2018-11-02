@@ -13,7 +13,7 @@ class HeaderCollectionViewCell: CollectionViewCell {
     lazy var logoLabel: UILabel = {
         let title = UILabel(frame: .zero)
         title.text = "woke"
-        title.font = UIFont.systemFont(ofSize: 35, weight: .bold)
+        title.font = UIFont.systemFont(ofSize: 32, weight: .bold)
         return title
     }()
     
@@ -25,15 +25,47 @@ class HeaderCollectionViewCell: CollectionViewCell {
         return subtitleLabel
     }()
     
-    lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [logoLabel, subtitleLabel])
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.alignment = .leading
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
+    lazy var settingsButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(#imageLiteral(resourceName: "settings"), for: .normal)
+        button.contentMode = .scaleAspectFit
+        button.addTarget(self, action: #selector(settingsPressed), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            button.heightAnchor.constraint(equalToConstant: 20),
+            button.widthAnchor.constraint(equalToConstant: 20)
+            ])
+        
+        return button
+    }()
+    
+    lazy var bottomStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [subtitleLabel, settingsButton])
+        stackView.axis = .horizontal
+        stackView.alignment = .center
         return stackView
     }()
     
+    lazy var stackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [logoLabel, bottomStackView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 8.0
+        return stackView
+    }()
+    
+    var settingsExpanded: Bool = true {
+        didSet {
+            UIView.animate(withDuration: 0.25) {
+                if self.settingsExpanded {
+                    self.settingsButton.transform = CGAffineTransform.identity
+                } else {
+                    self.settingsButton.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2.0)
+                }
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,6 +79,12 @@ class HeaderCollectionViewCell: CollectionViewCell {
             stackView.leftAnchor.constraint(equalTo: container.leftAnchor, constant: 0),
             stackView.rightAnchor.constraint(equalTo: container.rightAnchor, constant: 0)
             ])
+    }
+    
+    @objc func settingsPressed() {
+        settingsExpanded = !settingsExpanded
+        
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

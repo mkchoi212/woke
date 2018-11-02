@@ -22,7 +22,7 @@
                                 <rect key="frame" x="8" y="8" width="359" height="587"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-sJ-jND">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="2314.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="2301.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angela Merkel announces she will not seek re-election as German Chancellor" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lso-ew-HYh" userLabel="Title">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="86"/>
@@ -42,15 +42,8 @@
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aoX-AN-1h1" userLabel="Separator">
-                                                <rect key="frame" x="90" y="151" width="179.5" height="1"/>
-                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="1" id="wK8-QU-eET"/>
-                                                </constraints>
-                                            </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m44-O9-Vuc" userLabel="Main Text">
-                                                <rect key="frame" x="0.0" y="164" width="359" height="2150.5"/>
+                                                <rect key="frame" x="0.0" y="151" width="359" height="2150.5"/>
                                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ante in nibh mauris cursus mattis molestie. Sed vulputate odio ut enim blandit. Morbi tristique senectus et netus et malesuada fames ac. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Imperdiet massa tincidunt nunc pulvinar sapien et ligula. Dui id ornare arcu odio. Mi proin sed libero enim sed faucibus turpis in. Sed id semper risus in hendrerit. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Amet consectetur adipiscing elit duis tristique. Vel pharetra vel turpis nunc eget. Dolor purus non enim praesent elementum facilisis leo vel fringilla. Nec feugiat nisl pretium fusce id velit. Nec feugiat in fermentum posuere urna nec tincidunt praesent semper. Sapien nec sagittis aliquam malesuada bibendum arcu. Dui id ornare arcu odio. In fermentum posuere urna nec tincidunt praesent semper. Nunc faucibus a pellentesque sit.
 
 Tellus pellentesque eu tincidunt tortor aliquam nulla. Nulla porttitor massa id neque aliquam vestibulum. Adipiscing at in tellus integer. Enim nunc faucibus a pellentesque sit amet porttitor eget. Pharetra massa massa ultricies mi quis hendrerit dolor magna. Tristique magna sit amet purus gravida quis blandit turpis. Senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada. Pulvinar etiam non quam lacus suspendisse faucibus interdum. Orci porta non pulvinar neque laoreet suspendisse interdum. Purus sit amet luctus venenatis. Aliquet sagittis id consectetur purus ut faucibus. Adipiscing elit ut aliquam purus sit amet. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Vulputate eu scelerisque felis imperdiet proin fermentum leo. Tristique risus nec feugiat in fermentum. Adipiscing diam donec adipiscing tristique risus. Pharetra pharetra massa massa ultricies mi quis hendrerit. Id interdum velit laoreet id donec ultrices. Non odio euismod lacinia at quis risus sed.
@@ -68,7 +61,6 @@ Faucibus turpis in eu mi bibendum. Blandit turpis cursus in hac habitasse platea
                                         <constraints>
                                             <constraint firstItem="5cf-HS-4eh" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="0R8-fM-M20"/>
                                             <constraint firstItem="m44-O9-Vuc" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="HQz-Ev-dta"/>
-                                            <constraint firstItem="aoX-AN-1h1" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" multiplier="0.5" id="IFB-3b-Zgx"/>
                                             <constraint firstItem="5rp-FE-pTL" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="X2Q-pk-VSd"/>
                                             <constraint firstItem="Lso-ew-HYh" firstAttribute="width" secondItem="rFb-sJ-jND" secondAttribute="width" id="e40-69-rs0"/>
                                         </constraints>
@@ -105,7 +97,7 @@ Faucibus turpis in eu mi bibendum. Blandit turpis cursus in hac habitasse platea
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2d-Vh-n1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1591" y="-11"/>
+            <point key="canvasLocation" x="1589.5999999999999" y="-11.244377811094454"/>
         </scene>
         <!--News Navigation Controller-->
         <scene sceneID="9yN-r6-mbD">

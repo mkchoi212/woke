@@ -50,6 +50,8 @@ class CollectionViewController: UIViewController {
         view.backgroundColor = UIColor.white
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
+        
+        
         if let selected = selected {
             let margin = type(of: self).margin
             
@@ -71,9 +73,9 @@ class CollectionViewController: UIViewController {
             collectionView.contentInset = contentInset
             
             NSLayoutConstraint.activate([
-                header.topAnchor.constraint(equalTo: view.topAnchor, constant: margin),
-                header.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin),
-                header.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin),
+                header.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: margin),
+                header.leftAnchor.constraint(equalTo: view.safeLeftAnchor, constant: margin),
+                header.rightAnchor.constraint(equalTo: view.safeRightAnchor, constant: -margin),
                 header.heightAnchor.constraint(equalToConstant: height)
                 ])
             
@@ -95,9 +97,9 @@ class CollectionViewController: UIViewController {
             collectionView.contentInset = contentInset
             
             NSLayoutConstraint.activate([
-                banner.topAnchor.constraint(equalTo: view.topAnchor, constant: margin),
-                banner.leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin),
-                banner.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin),
+                banner.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: margin),
+                banner.leftAnchor.constraint(equalTo: view.safeLeftAnchor, constant: margin),
+                banner.rightAnchor.constraint(equalTo: view.safeRightAnchor, constant: -margin),
                 banner.heightAnchor.constraint(equalToConstant: height)
                 ])
             
@@ -112,10 +114,10 @@ class CollectionViewController: UIViewController {
         }
         
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
-            collectionView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            collectionView.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: 10),
+            collectionView.leftAnchor.constraint(equalTo: view.safeLeftAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            collectionView.rightAnchor.constraint(equalTo: view.rightAnchor)
+            collectionView.rightAnchor.constraint(equalTo: view.safeRightAnchor)
             ])
     }
     
