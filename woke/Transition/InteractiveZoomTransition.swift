@@ -103,6 +103,10 @@ class InteractiveZoomTransition : SharedElementTransition {
     }
     
     func animation() {
+        if targetState == nil || initialState == nil {
+            return
+        }
+        
         if animatingPosition == .end {
             applyState(targetState)
         } else {

@@ -29,13 +29,18 @@ class NewsViewController: UIViewController{
         return UIBarButtonItem(customView: likeButton)
     }()
     
+    lazy var shareButton: UIBarButtonItem = {
+        return UIBarButtonItem(barButtonSystemItem: .action , target: self, action: #selector(shareArticle))
+    }()
+    
+    // TODO REPLACE MAGICAL FRAME NUMBERS
     lazy var nextButton: UIBarButtonItem = {
         let button =  UIButton(type: .custom)
         button.setImage(#imageLiteral(resourceName: "next_arrow"), for: .normal)
         button.frame = CGRect(x: 0, y: 0, width: 70, height: 25)
         button.addTarget(self, action: #selector(showNextArticle), for: .touchUpInside)
         
-        let label = UILabel(frame: CGRect(x: -110, y: -10, width: 100, height: 40))
+        let label = UILabel(frame: CGRect(x: -110, y: -12, width: 100, height: 40))
         let categoryName = "CATEGORY"
         let labelText = "NEXT IN\n\(categoryName)"
         label.attributedText = labelText.attributedString(nonBoldRange: NSRange(location: 8, length: categoryName.count), fontSize: 12)
@@ -58,11 +63,15 @@ class NewsViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.leftBarButtonItem = likeButton
+        navigationItem.leftBarButtonItems = [likeButton, shareButton]
         navigationItem.rightBarButtonItem = nextButton
     }
     
     @objc func showNextArticle() {
+        
+    }
+    
+    @objc func shareArticle() {
         
     }
 }
