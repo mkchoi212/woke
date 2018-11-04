@@ -71,8 +71,22 @@ class NewsViewController: UIViewController{
         
     }
     
-    @objc func shareArticle() {
+    @objc func shareArticle(sender:UIView) {
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
         
+        let textToShare = "Check out this news article!"
+        
+        if let articleLink = URL(string: "http://cnn.com") {
+            let objectsToShare = [textToShare, articleLink] as [Any]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //Excluded Activities
+            activityVC.excludedActivityTypes = [UIActivityType.saveToCameraRoll]
+            
+            activityVC.popoverPresentationController?.sourceView = sender
+            self.present(activityVC, animated: true, completion: nil)
+        }
     }
 }
 
