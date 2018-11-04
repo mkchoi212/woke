@@ -7,161 +7,205 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04DD9DA15C2CF0D94B9F87C4DB193696 /* Pods-woke-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E02043CC302D96895C8C859950D35 /* Pods-woke-dummy.m */; };
-		099BECF684470913324FD8BD723DEFBB /* AnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B81D52C72E0AD33B57CFFA7CCAEBDA1 /* AnimationLayer.swift */; };
-		0CB7B3A2B338EF5D5A56F51039793795 /* Pods-woke-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64EF7800EEAABC80C22492F888A4BAF0 /* Pods-woke-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0FC3D5B562227763F9E7AB65612BF6DE /* TransitionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67958D98A1B34547CAD608DE155C268F /* TransitionsSource.swift */; };
-		1BE97699CB48DAD46E3139131E48CA19 /* RevealTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF94BF777965A6404AEFE6172F50368D /* RevealTransitionAnimation.swift */; };
-		1C998C96E1CF57F22EE911852F74A1AC /* TransitionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AED132ECFAFC1BCAE575583141FDB8 /* TransitionOperation.swift */; };
-		256D438DCF5065CF144B65B76FF8125C /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327DFB300E08A3E97D617CB61AF34EBC /* Transition.swift */; };
-		29E37761CC7D3A482D503087E1C70D51 /* MoveTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7664CC89DC0D686D6DD3A991F99284A2 /* MoveTransitionAnimation.swift */; };
-		39F2EC75E1FA2C5C39CFA282694F5941 /* TransitionPhaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4385B81DA063D5AE70F6B76BDC3A1E /* TransitionPhaseDelegate.swift */; };
-		450DE32DA9008753DEEAAA3667680F13 /* SharedElementTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406A3ECFC8C3CE220F662D71E7D70600 /* SharedElementTransition.swift */; };
-		47AC34C1434B9CAC329BB9B9005FEA08 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108F7417CEB493CE1D4A05479C0933C /* TransitionAnimation.swift */; };
-		47E73CA6807378EA57236EBBD2D925F6 /* TransitionEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1910C2F7346358F55329AF6C5B2C630 /* TransitionEdges.swift */; };
-		498404739B291BD4DF134EC4B20FB125 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		51DA84DCAF8D4D2F49AAAC12E5298A3F /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738EB9697B61EE2AA286398C8DE7BABF /* TransitionController.swift */; };
-		544FD569970C11CF262810A22BF18698 /* UINavigationControllerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F19D394CD7211C260954EFB5B2DF39 /* UINavigationControllerDelegateProxy.swift */; };
-		5AEDC60CD8C2CFC7FADF0E7CDC2DF9B7 /* SharedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57029D1535557CE184915BA21CE132C7 /* SharedElement.swift */; };
-		62A17AA8DE3C7BB6F843D60401614DC3 /* DissolveTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A7026E86FD47FE58DBA89DC60B08BE /* DissolveTransitionAnimation.swift */; };
-		653A701A06781943D6E7657A5FFF2492 /* TransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E0FF72BB6E5983134239C4429BEDDF /* TransitionInteractionController.swift */; };
-		6947ACEB5C9CDA1514AB6E42487397F1 /* AnimationRange+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCF13B41833E3BA9185337353B797B4 /* AnimationRange+Helpers.swift */; };
-		69A6A535CEA2451859105D55F8D7A95A /* TransitionCompletionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D2A6FA3912DA2E9590C61B0EDABFB3 /* TransitionCompletionCoordinator.swift */; };
-		6B64D1E45BD6F42A61189F5CBCE140BD /* PanInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4775037CECD4F5CFE1EC2E3A58094 /* PanInteractionController.swift */; };
-		772FD71887E4DFB139EC081155457C32 /* PushTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B24678A43602258775C4CA5F285A8C /* PushTransitionAnimation.swift */; };
-		83C1E71D13E7A08438AF4AFDBDFAC421 /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750F549296A48D4F6D5E7B4D3766BE81 /* TransitionDriver.swift */; };
-		8B016419F3CB2AEF9A0E514973546296 /* EdgeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514DEC165519A7B2E1312FDB5399F2F2 /* EdgeTransitionAnimation.swift */; };
-		A5FBFA50776B68B2CC9B50BABC34E65D /* InteractiveTransitionOperationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC9BAF570EA253BFC7E0852DD1A5465 /* InteractiveTransitionOperationDelegate.swift */; };
-		AB5DBCEFB948EBBC19C91958F570C84C /* UIViewControllerContextTransitioning+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0559CECF69F96C827E55190B5108A65A /* UIViewControllerContextTransitioning+Properties.swift */; };
-		B38E2147F6ED2B24B6EFBFB34392212D /* AnimationRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCF8084D96945C19B69E847E08FDDFD /* AnimationRange.swift */; };
-		B867103A215A27D779F1EEA91C5495C6 /* Transition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3167C04D142C8B1F68906D8CDA24C5DF /* Transition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D74086B1CFA45D489AD201B1526082A3 /* Transition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D04DE06A937E20374AEE33ED323B8C0 /* Transition-dummy.m */; };
-		DB43C912FE543564FAD1184A66456C63 /* UITabBarControllerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02FF6350C5FFF26F37EAEF7831BC3F16 /* UITabBarControllerDelegateProxy.swift */; };
-		DFCCDA06D485ED600AC8E9B8700B5C80 /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C492D4E27B5F6B0A8EDC26C19A4F4314 /* DelegateProxy.swift */; };
-		E27FB8FC8B672DC7A245F22B6CEA9236 /* ModalPresentationControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7E2975FFF6DA93C891B57F8352610 /* ModalPresentationControllerSource.swift */; };
-		E52F53C83F6B3062BFD86775209D3DCE /* TransitionOperationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7762DE2C4CF7B9148EA5088EC11840 /* TransitionOperationContext.swift */; };
-		E9D4A22055DA7AB624E5CE9CB9948FFF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		F458384EA8BA5D77DBB938CCDB013E93 /* AnimationTimingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6D046149BA2A448BC207A084AAE4B /* AnimationTimingParameters.swift */; };
+		00E7F631B37D0D25119107BB5FC2809B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		0494266F5D6955BE4B098243767EE563 /* Transition-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8281B91992259B4E94193DE7A0A048D4 /* Transition-dummy.m */; };
+		0C17B82F56F07EBC5E7DE527F6E3E441 /* TransitionsSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97A106F2BD67F2B7D0E8D36E9EB9610 /* TransitionsSource.swift */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8F22388C7572207E2B83F24166CFED /* Timeline.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 88204A80116CD28DFB3B10BA2C733AC6 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E76588C3E2B335BFF6491670F2E3181 /* TransitionOperationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5035A0CA65AA740C2079253E62E308B9 /* TransitionOperationContext.swift */; };
+		1EE33917C183E634FE750B3A38C8E97C /* PushTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236032CDAF76ABF118ABA8B82D8E7155 /* PushTransitionAnimation.swift */; };
+		21F0A557003B3E7B2C51E80640827EDE /* Transition-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AFD3032650699236E87AC9F4DC6C529A /* Transition-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D390CED1BFC33A179AFDA1A9B8C4FF2 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799DF5FE79541B586573E12C5C1552F1 /* Transition.swift */; };
+		2D7E5976E38B8CB6BEE39AE923803DBB /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4404A2799AE6066B3EFFF40ACF45D5BB /* TransitionAnimation.swift */; };
+		2F10DBB189478872BDF0234DBFF811E4 /* TransitionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33442EF94815BF375F78A838E441268 /* TransitionOperation.swift */; };
+		35A32701C327617577F115AEC2B4D3DD /* UITabBarControllerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCDA3A6BCD3406A85BC11442761A181 /* UITabBarControllerDelegateProxy.swift */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E812B337E03CFA4A3019FAFED8E5C723 /* TaskDelegate.swift */; };
+		4FBB7AC45B663204B830EE0D2DC4F749 /* ModalPresentationControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CB08912754039A333EE8ADEBE40ACC /* ModalPresentationControllerSource.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546CCAE266FD908B972B726D9C0F5CF2 /* Request.swift */; };
+		58B6F5BA6B416A6944C0B514BFB7670A /* TransitionCompletionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1547CB7462ECA9AA9B0E6D59B93EFC /* TransitionCompletionCoordinator.swift */; };
+		58CFB3C5EFC6625816308677ACBD295D /* AnimationRange+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D321622FE286AAA04C253880CC65304 /* AnimationRange+Helpers.swift */; };
+		5AFB8B1E1791A319AC266F8B1304D2EA /* UIViewControllerContextTransitioning+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D793F02B0785F3D00183C4C16FDB60 /* UIViewControllerContextTransitioning+Properties.swift */; };
+		60D5777DC140BACD8E77A1CF5417243F /* TransitionDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B42E85FA82EB630A5ACFB08E6E4FD52 /* TransitionDriver.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B145AEDF71D64CC2EAB3FF5C7ACC0239 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5161DDADFF87A6127C7246A5039A20CE /* ServerTrustPolicy.swift */; };
+		6807A13AE3D3ED1887226829B961102D /* TransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E3361D26F5FDAAA364938D87001728 /* TransitionController.swift */; };
+		70B338C2FAE0AD8EFF5B3F70C5167866 /* DissolveTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295A1EB8271D13FDE8A07654D5E86CD4 /* DissolveTransitionAnimation.swift */; };
+		79C5AEBF9360957D201289CF6BA3E548 /* PanInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7803D7873A7487965014AED191579B /* PanInteractionController.swift */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200FC885D7E86041E94364C3133166C6 /* SessionDelegate.swift */; };
+		7D41E1F043142D4D4ECA1048C59D7AD0 /* DelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF6C751F789AF7CD4B39C03D2A63F5B /* DelegateProxy.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F17C2F74574C47D88A5360A4C18AEA /* Result.swift */; };
+		834F4D9819C6010E611A7E151B8899C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		918F1221C1D612DF1244C4E1FB3CBC34 /* AnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77F5E60477991DA8983B9B9728A8C64 /* AnimationLayer.swift */; };
+		92A441BB9F82314955009D02288EAC80 /* TransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D22B67CE8252651DA1F811EAA8D41A /* TransitionInteractionController.swift */; };
+		9443B21682FE1AEDE18135199A83AD56 /* AnimationRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D871058B7C7F63B506CEF9CA794B23C /* AnimationRange.swift */; };
+		98F4672744006CEC7EB139EB7ED848FA /* UINavigationControllerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82E48BD6311D710B5468BE10A28662C /* UINavigationControllerDelegateProxy.swift */; };
+		9C362DF67BD65315727F1B36787E0EEF /* EdgeTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B20A40F63C3A6B1671E41F11618AD5 /* EdgeTransitionAnimation.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7170617606FCC13941E81356C109FFA1 /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C619903AC69E295C4F63939291FCBE42 /* NetworkReachabilityManager.swift */; };
+		A58F3E5F5043CEFEE4AD78D2774DA7B5 /* SharedElementTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7137C5D5C83686DAD5DAD01DD30773 /* SharedElementTransition.swift */; };
+		A6824FE0F1B10F14E7169FD33FE0C7A7 /* MoveTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE07CC37C88252C46EB59C1A2278EEC4 /* MoveTransitionAnimation.swift */; };
+		A768C869CCA15A6F00FE9C9B92D29CFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39681C4E644BBF6349E73E276501A48F /* Alamofire-dummy.m */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B429086F4B4BACFA85BB416F55BC7050 /* SessionManager.swift */; };
+		B157C919715BF838B73B9DD6696E8C1F /* TransitionPhaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B5E11DEA5D150B33869CC1C66A3925 /* TransitionPhaseDelegate.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FC25E9F3A30F1AEE3896A6457CAB65 /* MultipartFormData.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075FE37D323D8BABC2678AA124CDE717 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF50CB958C8C523B372FC46A40A3BE6 /* ParameterEncoding.swift */; };
+		C93E32D6E7F4B5E74F83A83651D64142 /* TransitionEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980CD1EC24315ED57ACF2DD9A89DA353 /* TransitionEdges.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167A57D0A8B1A725285B741B081A32B3 /* Response.swift */; };
+		D13DAAD27EAEF19BC8614C140550CDB2 /* RevealTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA80B243A6C0071D7211451E05DE497 /* RevealTransitionAnimation.swift */; };
+		D35136C7413664D7F5D1E69707D012AD /* Pods-woke-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64EF7800EEAABC80C22492F888A4BAF0 /* Pods-woke-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7F97C83AF1608B759BA02E54F1DC3C9 /* SharedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24AF92BF292EFA5D9046B3E4D9087B /* SharedElement.swift */; };
+		EB2162408F55DA0391328ACBE7E5244E /* InteractiveTransitionOperationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18D99A7AF5FB7AA7F09AC98A43117E /* InteractiveTransitionOperationDelegate.swift */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708E822B698CB78E29584A23BC16774E /* Notifications.swift */; };
+		F1D2F0C64B417A17D21E8C4CD7E46C05 /* AnimationTimingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA719C0E96D4A46093D762A49B764336 /* AnimationTimingParameters.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285B430E91C5B43131EF5B56205AEF26 /* ResponseSerialization.swift */; };
+		F7F01C1F66CD99D817F09EA9BDD475B5 /* Pods-woke-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3E02043CC302D96895C8C859950D35 /* Pods-woke-dummy.m */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B48F25BDCBAEF80A634A22D0E05454 /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6B2E9FB3EA2B26B7582462DD29D714B6 /* PBXContainerItemProxy */ = {
+		393B2FF06E32C7798594C309FEA70579 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B2A3CE7AABA0783524AFD405440A299E;
+			remoteGlobalIDString = F5746BBFF4D734120D9C04C6AA99EA2D;
 			remoteInfo = Transition;
+		};
+		5CEF0164106068BDAEFC04623191A0F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0108F7417CEB493CE1D4A05479C0933C /* TransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimation.swift; path = Transition/Classes/TransitionAnimation.swift; sourceTree = "<group>"; };
-		02FF6350C5FFF26F37EAEF7831BC3F16 /* UITabBarControllerDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarControllerDelegateProxy.swift; path = Transition/Classes/Helpers/UITabBarControllerDelegateProxy.swift; sourceTree = "<group>"; };
-		0559CECF69F96C827E55190B5108A65A /* UIViewControllerContextTransitioning+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewControllerContextTransitioning+Properties.swift"; path = "Transition/Classes/Helpers/UIViewControllerContextTransitioning+Properties.swift"; sourceTree = "<group>"; };
-		25F852A198CA223011C6DD30F2675C1F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29E0FF72BB6E5983134239C4429BEDDF /* TransitionInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionInteractionController.swift; path = Transition/Classes/TransitionInteractionController.swift; sourceTree = "<group>"; };
-		3167C04D142C8B1F68906D8CDA24C5DF /* Transition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Transition-umbrella.h"; sourceTree = "<group>"; };
+		03B5E11DEA5D150B33869CC1C66A3925 /* TransitionPhaseDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionPhaseDelegate.swift; path = Transition/Classes/TransitionPhaseDelegate.swift; sourceTree = "<group>"; };
+		075FE37D323D8BABC2678AA124CDE717 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		167A57D0A8B1A725285B741B081A32B3 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		1B42E85FA82EB630A5ACFB08E6E4FD52 /* TransitionDriver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionDriver.swift; path = Transition/Classes/TransitionDriver.swift; sourceTree = "<group>"; };
+		1D871058B7C7F63B506CEF9CA794B23C /* AnimationRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationRange.swift; path = Transition/Classes/AnimationRange.swift; sourceTree = "<group>"; };
+		200FC885D7E86041E94364C3133166C6 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		2253CDCD24A60624810CE9FBEC93A2AF /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		236032CDAF76ABF118ABA8B82D8E7155 /* PushTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/PushTransitionAnimation.swift; sourceTree = "<group>"; };
+		26A715C9210CE1673872FDCE764E08A2 /* Transition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Transition.xcconfig; sourceTree = "<group>"; };
+		285B430E91C5B43131EF5B56205AEF26 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		295A1EB8271D13FDE8A07654D5E86CD4 /* DissolveTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DissolveTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/DissolveTransitionAnimation.swift; sourceTree = "<group>"; };
 		31EC2C5D8A2F7013514117C8838A8641 /* Pods-woke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-woke.debug.xcconfig"; sourceTree = "<group>"; };
-		327DFB300E08A3E97D617CB61AF34EBC /* Transition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transition.swift; path = Transition/Classes/Transition.swift; sourceTree = "<group>"; };
+		39681C4E644BBF6349E73E276501A48F /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		39CB08912754039A333EE8ADEBE40ACC /* ModalPresentationControllerSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModalPresentationControllerSource.swift; path = Transition/Classes/ModalPresentationControllerSource.swift; sourceTree = "<group>"; };
 		3A3E02043CC302D96895C8C859950D35 /* Pods-woke-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-woke-dummy.m"; sourceTree = "<group>"; };
-		3AA6646647CEB3D15B49CB18A837613B /* Transition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Transition.framework; path = Transition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		406A3ECFC8C3CE220F662D71E7D70600 /* SharedElementTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharedElementTransition.swift; path = Transition/Classes/SharedElementTransition.swift; sourceTree = "<group>"; };
-		514DEC165519A7B2E1312FDB5399F2F2 /* EdgeTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/EdgeTransitionAnimation.swift; sourceTree = "<group>"; };
-		51AED132ECFAFC1BCAE575583141FDB8 /* TransitionOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionOperation.swift; path = Transition/Classes/TransitionOperation.swift; sourceTree = "<group>"; };
-		57029D1535557CE184915BA21CE132C7 /* SharedElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharedElement.swift; path = Transition/Classes/SharedElement.swift; sourceTree = "<group>"; };
+		3F7137C5D5C83686DAD5DAD01DD30773 /* SharedElementTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharedElementTransition.swift; path = Transition/Classes/SharedElementTransition.swift; sourceTree = "<group>"; };
+		4404A2799AE6066B3EFFF40ACF45D5BB /* TransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionAnimation.swift; path = Transition/Classes/TransitionAnimation.swift; sourceTree = "<group>"; };
+		5035A0CA65AA740C2079253E62E308B9 /* TransitionOperationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionOperationContext.swift; path = Transition/Classes/TransitionOperationContext.swift; sourceTree = "<group>"; };
+		5161DDADFF87A6127C7246A5039A20CE /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		546CCAE266FD908B972B726D9C0F5CF2 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5A7762DE2C4CF7B9148EA5088EC11840 /* TransitionOperationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionOperationContext.swift; path = Transition/Classes/TransitionOperationContext.swift; sourceTree = "<group>"; };
-		5AB7E2975FFF6DA93C891B57F8352610 /* ModalPresentationControllerSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModalPresentationControllerSource.swift; path = Transition/Classes/ModalPresentationControllerSource.swift; sourceTree = "<group>"; };
+		5D321622FE286AAA04C253880CC65304 /* AnimationRange+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimationRange+Helpers.swift"; path = "Transition/Classes/Helpers/AnimationRange+Helpers.swift"; sourceTree = "<group>"; };
 		5FD03B866E7637BC66193E736FC95DEA /* Pods-woke-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-woke-frameworks.sh"; sourceTree = "<group>"; };
+		60B20A40F63C3A6B1671E41F11618AD5 /* EdgeTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EdgeTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/EdgeTransitionAnimation.swift; sourceTree = "<group>"; };
+		61F17C2F74574C47D88A5360A4C18AEA /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
 		64EF7800EEAABC80C22492F888A4BAF0 /* Pods-woke-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-woke-umbrella.h"; sourceTree = "<group>"; };
-		67958D98A1B34547CAD608DE155C268F /* TransitionsSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionsSource.swift; path = Transition/Classes/TransitionsSource.swift; sourceTree = "<group>"; };
-		69D2A6FA3912DA2E9590C61B0EDABFB3 /* TransitionCompletionCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionCompletionCoordinator.swift; path = Transition/Classes/TransitionCompletionCoordinator.swift; sourceTree = "<group>"; };
-		738EB9697B61EE2AA286398C8DE7BABF /* TransitionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionController.swift; path = Transition/Classes/TransitionController.swift; sourceTree = "<group>"; };
-		750F549296A48D4F6D5E7B4D3766BE81 /* TransitionDriver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionDriver.swift; path = Transition/Classes/TransitionDriver.swift; sourceTree = "<group>"; };
-		7664CC89DC0D686D6DD3A991F99284A2 /* MoveTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoveTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/MoveTransitionAnimation.swift; sourceTree = "<group>"; };
-		7D9E6866E7E83BB62B9E7D04A2497972 /* Transition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Transition.modulemap; sourceTree = "<group>"; };
-		81056A8B0F11F830CED7B3FB5AAD3B4C /* Transition.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Transition.xcconfig; sourceTree = "<group>"; };
-		827E749114B0E3407AB63532A0CB7281 /* Pods_woke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_woke.framework; path = "Pods-woke.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		894AD889F36EECF3B93196B1E4D1218D /* Transition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Transition-prefix.pch"; sourceTree = "<group>"; };
-		8B81D52C72E0AD33B57CFFA7CCAEBDA1 /* AnimationLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationLayer.swift; path = Transition/Classes/AnimationLayer.swift; sourceTree = "<group>"; };
-		8BD4775037CECD4F5CFE1EC2E3A58094 /* PanInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PanInteractionController.swift; path = Transition/Classes/Convenience/PanInteractionController.swift; sourceTree = "<group>"; };
-		8DC9BAF570EA253BFC7E0852DD1A5465 /* InteractiveTransitionOperationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveTransitionOperationDelegate.swift; path = Transition/Classes/InteractiveTransitionOperationDelegate.swift; sourceTree = "<group>"; };
-		92A6D046149BA2A448BC207A084AAE4B /* AnimationTimingParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTimingParameters.swift; path = Transition/Classes/AnimationTimingParameters.swift; sourceTree = "<group>"; };
+		65713283065DD838C69842B2489125BA /* Transition-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Transition-prefix.pch"; sourceTree = "<group>"; };
+		6BF50CB958C8C523B372FC46A40A3BE6 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		6F6B7E6CF2E761253ED66AEB6031CF89 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		708E822B698CB78E29584A23BC16774E /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		71610E7335E1C80A66B3A6F01EC34E1D /* Transition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Transition.framework; path = Transition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7170617606FCC13941E81356C109FFA1 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		77B48F25BDCBAEF80A634A22D0E05454 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		799DF5FE79541B586573E12C5C1552F1 /* Transition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transition.swift; path = Transition/Classes/Transition.swift; sourceTree = "<group>"; };
+		801B2F260D7FB3885D6226728E4F1872 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8281B91992259B4E94193DE7A0A048D4 /* Transition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Transition-dummy.m"; sourceTree = "<group>"; };
+		88204A80116CD28DFB3B10BA2C733AC6 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		8DF6C751F789AF7CD4B39C03D2A63F5B /* DelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxy.swift; path = Transition/Classes/Helpers/DelegateProxy.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		980CD1EC24315ED57ACF2DD9A89DA353 /* TransitionEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionEdges.swift; path = Transition/Classes/Helpers/TransitionEdges.swift; sourceTree = "<group>"; };
+		9B1547CB7462ECA9AA9B0E6D59B93EFC /* TransitionCompletionCoordinator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionCompletionCoordinator.swift; path = Transition/Classes/TransitionCompletionCoordinator.swift; sourceTree = "<group>"; };
 		9C6A71A9A49191D94F544E69F6B11944 /* Pods-woke-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-woke-resources.sh"; sourceTree = "<group>"; };
-		9D04DE06A937E20374AEE33ED323B8C0 /* Transition-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Transition-dummy.m"; sourceTree = "<group>"; };
-		9DCF13B41833E3BA9185337353B797B4 /* AnimationRange+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AnimationRange+Helpers.swift"; path = "Transition/Classes/Helpers/AnimationRange+Helpers.swift"; sourceTree = "<group>"; };
-		A1910C2F7346358F55329AF6C5B2C630 /* TransitionEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionEdges.swift; path = Transition/Classes/Helpers/TransitionEdges.swift; sourceTree = "<group>"; };
+		A5E3361D26F5FDAAA364938D87001728 /* TransitionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionController.swift; path = Transition/Classes/TransitionController.swift; sourceTree = "<group>"; };
 		A81DC1D0DF03DA6FFA5EB6A1D287B9D2 /* Pods-woke-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-woke-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC4385B81DA063D5AE70F6B76BDC3A1E /* TransitionPhaseDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionPhaseDelegate.swift; path = Transition/Classes/TransitionPhaseDelegate.swift; sourceTree = "<group>"; };
-		B3A7026E86FD47FE58DBA89DC60B08BE /* DissolveTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DissolveTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/DissolveTransitionAnimation.swift; sourceTree = "<group>"; };
+		A82E48BD6311D710B5468BE10A28662C /* UINavigationControllerDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINavigationControllerDelegateProxy.swift; path = Transition/Classes/Helpers/UINavigationControllerDelegateProxy.swift; sourceTree = "<group>"; };
+		ABA80B243A6C0071D7211451E05DE497 /* RevealTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RevealTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/RevealTransitionAnimation.swift; sourceTree = "<group>"; };
+		AFD3032650699236E87AC9F4DC6C529A /* Transition-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Transition-umbrella.h"; sourceTree = "<group>"; };
+		B145AEDF71D64CC2EAB3FF5C7ACC0239 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		B429086F4B4BACFA85BB416F55BC7050 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		B8FC25E9F3A30F1AEE3896A6457CAB65 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		BABB7C58D38E353C755344B1ED1917F0 /* Transition.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Transition.modulemap; sourceTree = "<group>"; };
 		BCB0E1A85A514EEBD63456259B8E67BE /* Pods-woke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-woke.release.xcconfig"; sourceTree = "<group>"; };
-		C492D4E27B5F6B0A8EDC26C19A4F4314 /* DelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DelegateProxy.swift; path = Transition/Classes/Helpers/DelegateProxy.swift; sourceTree = "<group>"; };
+		BE07CC37C88252C46EB59C1A2278EEC4 /* MoveTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MoveTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/MoveTransitionAnimation.swift; sourceTree = "<group>"; };
+		C619903AC69E295C4F63939291FCBE42 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		C6B1CD661BF7FFCEE7C3925B4ECEF4F1 /* Pods-woke-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-woke-acknowledgements.plist"; sourceTree = "<group>"; };
-		D3B24678A43602258775C4CA5F285A8C /* PushTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/PushTransitionAnimation.swift; sourceTree = "<group>"; };
+		C97A106F2BD67F2B7D0E8D36E9EB9610 /* TransitionsSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionsSource.swift; path = Transition/Classes/TransitionsSource.swift; sourceTree = "<group>"; };
+		CE8EAA74244492F99569E40304C79A49 /* Pods_woke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_woke.framework; path = "Pods-woke.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D573557451CEADFA8F6258841E25F751 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8F19D394CD7211C260954EFB5B2DF39 /* UINavigationControllerDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UINavigationControllerDelegateProxy.swift; path = Transition/Classes/Helpers/UINavigationControllerDelegateProxy.swift; sourceTree = "<group>"; };
+		D77F5E60477991DA8983B9B9728A8C64 /* AnimationLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationLayer.swift; path = Transition/Classes/AnimationLayer.swift; sourceTree = "<group>"; };
+		DE18D99A7AF5FB7AA7F09AC98A43117E /* InteractiveTransitionOperationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InteractiveTransitionOperationDelegate.swift; path = Transition/Classes/InteractiveTransitionOperationDelegate.swift; sourceTree = "<group>"; };
+		DFCDA3A6BCD3406A85BC11442761A181 /* UITabBarControllerDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITabBarControllerDelegateProxy.swift; path = Transition/Classes/Helpers/UITabBarControllerDelegateProxy.swift; sourceTree = "<group>"; };
+		E33442EF94815BF375F78A838E441268 /* TransitionOperation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionOperation.swift; path = Transition/Classes/TransitionOperation.swift; sourceTree = "<group>"; };
+		E50B2EB95EC551C0695960A7714D3BCF /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		E6A06E7297A23A530686FEF69AD6A6DE /* Pods-woke.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-woke.modulemap"; sourceTree = "<group>"; };
-		ECCF8084D96945C19B69E847E08FDDFD /* AnimationRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationRange.swift; path = Transition/Classes/AnimationRange.swift; sourceTree = "<group>"; };
-		FF94BF777965A6404AEFE6172F50368D /* RevealTransitionAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RevealTransitionAnimation.swift; path = Transition/Classes/Convenience/Transitions/RevealTransitionAnimation.swift; sourceTree = "<group>"; };
+		E6D793F02B0785F3D00183C4C16FDB60 /* UIViewControllerContextTransitioning+Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewControllerContextTransitioning+Properties.swift"; path = "Transition/Classes/Helpers/UIViewControllerContextTransitioning+Properties.swift"; sourceTree = "<group>"; };
+		E812B337E03CFA4A3019FAFED8E5C723 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		E8D22B67CE8252651DA1F811EAA8D41A /* TransitionInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransitionInteractionController.swift; path = Transition/Classes/TransitionInteractionController.swift; sourceTree = "<group>"; };
+		EAFF569184C983C1E2E9512C05DC8420 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE7803D7873A7487965014AED191579B /* PanInteractionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PanInteractionController.swift; path = Transition/Classes/Convenience/PanInteractionController.swift; sourceTree = "<group>"; };
+		EF24AF92BF292EFA5D9046B3E4D9087B /* SharedElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharedElement.swift; path = Transition/Classes/SharedElement.swift; sourceTree = "<group>"; };
+		EF8F22388C7572207E2B83F24166CFED /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		EF8F39921361210043AD8E5D330452DB /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		FA719C0E96D4A46093D762A49B764336 /* AnimationTimingParameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTimingParameters.swift; path = Transition/Classes/AnimationTimingParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		390D17F339CB94DB296A18DB45B7FC36 /* Frameworks */ = {
+		7DA53BA215F80BDFBD348DBE7B199EFD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				498404739B291BD4DF134EC4B20FB125 /* Foundation.framework in Frameworks */,
+				A768C869CCA15A6F00FE9C9B92D29CFD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EC13E900DA7DDA8CFC8757D5F288FB6 /* Frameworks */ = {
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9D4A22055DA7AB624E5CE9CB9948FFF /* Foundation.framework in Frameworks */,
+				834F4D9819C6010E611A7E151B8899C3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A621CB65F9584F4A0D2E3CD1BF9293E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E7F631B37D0D25119107BB5FC2809B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29D5C2072C07CCF8657C4462CCCCE627 /* Transition */ = {
+		1082716DAE65F65838F742E9C5F88950 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8B81D52C72E0AD33B57CFFA7CCAEBDA1 /* AnimationLayer.swift */,
-				ECCF8084D96945C19B69E847E08FDDFD /* AnimationRange.swift */,
-				9DCF13B41833E3BA9185337353B797B4 /* AnimationRange+Helpers.swift */,
-				92A6D046149BA2A448BC207A084AAE4B /* AnimationTimingParameters.swift */,
-				C492D4E27B5F6B0A8EDC26C19A4F4314 /* DelegateProxy.swift */,
-				B3A7026E86FD47FE58DBA89DC60B08BE /* DissolveTransitionAnimation.swift */,
-				514DEC165519A7B2E1312FDB5399F2F2 /* EdgeTransitionAnimation.swift */,
-				8DC9BAF570EA253BFC7E0852DD1A5465 /* InteractiveTransitionOperationDelegate.swift */,
-				5AB7E2975FFF6DA93C891B57F8352610 /* ModalPresentationControllerSource.swift */,
-				7664CC89DC0D686D6DD3A991F99284A2 /* MoveTransitionAnimation.swift */,
-				8BD4775037CECD4F5CFE1EC2E3A58094 /* PanInteractionController.swift */,
-				D3B24678A43602258775C4CA5F285A8C /* PushTransitionAnimation.swift */,
-				FF94BF777965A6404AEFE6172F50368D /* RevealTransitionAnimation.swift */,
-				57029D1535557CE184915BA21CE132C7 /* SharedElement.swift */,
-				406A3ECFC8C3CE220F662D71E7D70600 /* SharedElementTransition.swift */,
-				327DFB300E08A3E97D617CB61AF34EBC /* Transition.swift */,
-				0108F7417CEB493CE1D4A05479C0933C /* TransitionAnimation.swift */,
-				69D2A6FA3912DA2E9590C61B0EDABFB3 /* TransitionCompletionCoordinator.swift */,
-				738EB9697B61EE2AA286398C8DE7BABF /* TransitionController.swift */,
-				750F549296A48D4F6D5E7B4D3766BE81 /* TransitionDriver.swift */,
-				A1910C2F7346358F55329AF6C5B2C630 /* TransitionEdges.swift */,
-				29E0FF72BB6E5983134239C4429BEDDF /* TransitionInteractionController.swift */,
-				51AED132ECFAFC1BCAE575583141FDB8 /* TransitionOperation.swift */,
-				5A7762DE2C4CF7B9148EA5088EC11840 /* TransitionOperationContext.swift */,
-				AC4385B81DA063D5AE70F6B76BDC3A1E /* TransitionPhaseDelegate.swift */,
-				67958D98A1B34547CAD608DE155C268F /* TransitionsSource.swift */,
-				D8F19D394CD7211C260954EFB5B2DF39 /* UINavigationControllerDelegateProxy.swift */,
-				02FF6350C5FFF26F37EAEF7831BC3F16 /* UITabBarControllerDelegateProxy.swift */,
-				0559CECF69F96C827E55190B5108A65A /* UIViewControllerContextTransitioning+Properties.swift */,
-				63EB07159BA2C2BC3AC0A849BE188CE1 /* Support Files */,
+				9D9D5F48AB640DFDB6AC0A1630C86800 /* Alamofire */,
+				F50727F3E58159C0775CE5654B545948 /* Transition */,
 			);
-			name = Transition;
-			path = Transition;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		25D22F780245DCD08A95EF89790FDFBD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2253CDCD24A60624810CE9FBEC93A2AF /* Alamofire.modulemap */,
+				E50B2EB95EC551C0695960A7714D3BCF /* Alamofire.xcconfig */,
+				39681C4E644BBF6349E73E276501A48F /* Alamofire-dummy.m */,
+				EF8F39921361210043AD8E5D330452DB /* Alamofire-prefix.pch */,
+				88204A80116CD28DFB3B10BA2C733AC6 /* Alamofire-umbrella.h */,
+				801B2F260D7FB3885D6226728E4F1872 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -170,20 +214,6 @@
 				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		63EB07159BA2C2BC3AC0A849BE188CE1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				25F852A198CA223011C6DD30F2675C1F /* Info.plist */,
-				7D9E6866E7E83BB62B9E7D04A2497972 /* Transition.modulemap */,
-				81056A8B0F11F830CED7B3FB5AAD3B4C /* Transition.xcconfig */,
-				9D04DE06A937E20374AEE33ED323B8C0 /* Transition-dummy.m */,
-				894AD889F36EECF3B93196B1E4D1218D /* Transition-prefix.pch */,
-				3167C04D142C8B1F68906D8CDA24C5DF /* Transition-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Transition";
 			sourceTree = "<group>";
 		};
 		7B206DCAA50F26A650A26316E62C4BB1 /* Targets Support Files */ = {
@@ -199,10 +229,50 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				C731322AC0C0DBB0AD99FD9A9ECCEEBB /* Pods */,
-				F3FD8FB1477C4E5AED0D501334F2FA91 /* Products */,
+				1082716DAE65F65838F742E9C5F88950 /* Pods */,
+				FB5A29971C5C7D20F4D6253EB4A0A2D7 /* Products */,
 				7B206DCAA50F26A650A26316E62C4BB1 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9D9D5F48AB640DFDB6AC0A1630C86800 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				7170617606FCC13941E81356C109FFA1 /* AFError.swift */,
+				77B48F25BDCBAEF80A634A22D0E05454 /* Alamofire.swift */,
+				B145AEDF71D64CC2EAB3FF5C7ACC0239 /* DispatchQueue+Alamofire.swift */,
+				B8FC25E9F3A30F1AEE3896A6457CAB65 /* MultipartFormData.swift */,
+				C619903AC69E295C4F63939291FCBE42 /* NetworkReachabilityManager.swift */,
+				708E822B698CB78E29584A23BC16774E /* Notifications.swift */,
+				6BF50CB958C8C523B372FC46A40A3BE6 /* ParameterEncoding.swift */,
+				546CCAE266FD908B972B726D9C0F5CF2 /* Request.swift */,
+				167A57D0A8B1A725285B741B081A32B3 /* Response.swift */,
+				285B430E91C5B43131EF5B56205AEF26 /* ResponseSerialization.swift */,
+				61F17C2F74574C47D88A5360A4C18AEA /* Result.swift */,
+				5161DDADFF87A6127C7246A5039A20CE /* ServerTrustPolicy.swift */,
+				200FC885D7E86041E94364C3133166C6 /* SessionDelegate.swift */,
+				B429086F4B4BACFA85BB416F55BC7050 /* SessionManager.swift */,
+				E812B337E03CFA4A3019FAFED8E5C723 /* TaskDelegate.swift */,
+				EF8F22388C7572207E2B83F24166CFED /* Timeline.swift */,
+				075FE37D323D8BABC2678AA124CDE717 /* Validation.swift */,
+				25D22F780245DCD08A95EF89790FDFBD /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		A8EE7FF6DC7E44B7E361CF02043642AE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAFF569184C983C1E2E9512C05DC8420 /* Info.plist */,
+				BABB7C58D38E353C755344B1ED1917F0 /* Transition.modulemap */,
+				26A715C9210CE1673872FDCE764E08A2 /* Transition.xcconfig */,
+				8281B91992259B4E94193DE7A0A048D4 /* Transition-dummy.m */,
+				65713283065DD838C69842B2489125BA /* Transition-prefix.pch */,
+				AFD3032650699236E87AC9F4DC6C529A /* Transition-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Transition";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -211,14 +281,6 @@
 				5E0D919E635D23B70123790B8308F8EF /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C731322AC0C0DBB0AD99FD9A9ECCEEBB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				29D5C2072C07CCF8657C4462CCCCE627 /* Transition */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		F0600B925329E82CB18B111113927335 /* Pods-woke */ = {
@@ -239,11 +301,50 @@
 			path = "Target Support Files/Pods-woke";
 			sourceTree = "<group>";
 		};
-		F3FD8FB1477C4E5AED0D501334F2FA91 /* Products */ = {
+		F50727F3E58159C0775CE5654B545948 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
-				827E749114B0E3407AB63532A0CB7281 /* Pods_woke.framework */,
-				3AA6646647CEB3D15B49CB18A837613B /* Transition.framework */,
+				D77F5E60477991DA8983B9B9728A8C64 /* AnimationLayer.swift */,
+				1D871058B7C7F63B506CEF9CA794B23C /* AnimationRange.swift */,
+				5D321622FE286AAA04C253880CC65304 /* AnimationRange+Helpers.swift */,
+				FA719C0E96D4A46093D762A49B764336 /* AnimationTimingParameters.swift */,
+				8DF6C751F789AF7CD4B39C03D2A63F5B /* DelegateProxy.swift */,
+				295A1EB8271D13FDE8A07654D5E86CD4 /* DissolveTransitionAnimation.swift */,
+				60B20A40F63C3A6B1671E41F11618AD5 /* EdgeTransitionAnimation.swift */,
+				DE18D99A7AF5FB7AA7F09AC98A43117E /* InteractiveTransitionOperationDelegate.swift */,
+				39CB08912754039A333EE8ADEBE40ACC /* ModalPresentationControllerSource.swift */,
+				BE07CC37C88252C46EB59C1A2278EEC4 /* MoveTransitionAnimation.swift */,
+				EE7803D7873A7487965014AED191579B /* PanInteractionController.swift */,
+				236032CDAF76ABF118ABA8B82D8E7155 /* PushTransitionAnimation.swift */,
+				ABA80B243A6C0071D7211451E05DE497 /* RevealTransitionAnimation.swift */,
+				EF24AF92BF292EFA5D9046B3E4D9087B /* SharedElement.swift */,
+				3F7137C5D5C83686DAD5DAD01DD30773 /* SharedElementTransition.swift */,
+				799DF5FE79541B586573E12C5C1552F1 /* Transition.swift */,
+				4404A2799AE6066B3EFFF40ACF45D5BB /* TransitionAnimation.swift */,
+				9B1547CB7462ECA9AA9B0E6D59B93EFC /* TransitionCompletionCoordinator.swift */,
+				A5E3361D26F5FDAAA364938D87001728 /* TransitionController.swift */,
+				1B42E85FA82EB630A5ACFB08E6E4FD52 /* TransitionDriver.swift */,
+				980CD1EC24315ED57ACF2DD9A89DA353 /* TransitionEdges.swift */,
+				E8D22B67CE8252651DA1F811EAA8D41A /* TransitionInteractionController.swift */,
+				E33442EF94815BF375F78A838E441268 /* TransitionOperation.swift */,
+				5035A0CA65AA740C2079253E62E308B9 /* TransitionOperationContext.swift */,
+				03B5E11DEA5D150B33869CC1C66A3925 /* TransitionPhaseDelegate.swift */,
+				C97A106F2BD67F2B7D0E8D36E9EB9610 /* TransitionsSource.swift */,
+				A82E48BD6311D710B5468BE10A28662C /* UINavigationControllerDelegateProxy.swift */,
+				DFCDA3A6BCD3406A85BC11442761A181 /* UITabBarControllerDelegateProxy.swift */,
+				E6D793F02B0785F3D00183C4C16FDB60 /* UIViewControllerContextTransitioning+Properties.swift */,
+				A8EE7FF6DC7E44B7E361CF02043642AE /* Support Files */,
+			);
+			name = Transition;
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		FB5A29971C5C7D20F4D6253EB4A0A2D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F6B7E6CF2E761253ED66AEB6031CF89 /* Alamofire.framework */,
+				CE8EAA74244492F99569E40304C79A49 /* Pods_woke.framework */,
+				71610E7335E1C80A66B3A6F01EC34E1D /* Transition.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,50 +352,76 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		948661091ED87D2084CD140D2F099EC6 /* Headers */ = {
+		58EAC54D09C2365A959F1C94A041B818 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B867103A215A27D779F1EEA91C5495C6 /* Transition-umbrella.h in Headers */,
+				21F0A557003B3E7B2C51E80640827EDE /* Transition-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7D6164469C24423B9C578E2A02E0B29 /* Headers */ = {
+		AB610807C3DAB9E34803E39741BC372E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CB7B3A2B338EF5D5A56F51039793795 /* Pods-woke-umbrella.h in Headers */,
+				D35136C7413664D7F5D1E69707D012AD /* Pods-woke-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A3D0B1BF4C2C50E00840F38064D8F90C /* Pods-woke */ = {
+		7C91B98D7DC64A3752AEAB1EBBA2BF83 /* Pods-woke */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD3734CF542DB894FB4909A14CA30CAA /* Build configuration list for PBXNativeTarget "Pods-woke" */;
+			buildConfigurationList = 6ED981E3BF196EDCCF0740090333CBA3 /* Build configuration list for PBXNativeTarget "Pods-woke" */;
 			buildPhases = (
-				FFF157F5CA3578EFAFC9BB50F373C69F /* Sources */,
-				390D17F339CB94DB296A18DB45B7FC36 /* Frameworks */,
-				E7D6164469C24423B9C578E2A02E0B29 /* Headers */,
+				472A9F5023115F70421CAD3DFD8B5B7C /* Sources */,
+				A621CB65F9584F4A0D2E3CD1BF9293E7 /* Frameworks */,
+				AB610807C3DAB9E34803E39741BC372E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0B508E5F9D075FED1FCC156E22E8682F /* PBXTargetDependency */,
+				F21618A9BFBE5225B1E040ACDFD0A3C5 /* PBXTargetDependency */,
+				56419620DC98404F64605324B04ECB5D /* PBXTargetDependency */,
 			);
 			name = "Pods-woke";
 			productName = "Pods-woke";
-			productReference = 827E749114B0E3407AB63532A0CB7281 /* Pods_woke.framework */;
+			productReference = CE8EAA74244492F99569E40304C79A49 /* Pods_woke.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B2A3CE7AABA0783524AFD405440A299E /* Transition */ = {
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED656FE5FE8D3DE453DAC49A6C4B568E /* Build configuration list for PBXNativeTarget "Transition" */;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
 			buildPhases = (
-				EC09152FD9F00D0A755728B94FD605BB /* Sources */,
-				7EC13E900DA7DDA8CFC8757D5F288FB6 /* Frameworks */,
-				948661091ED87D2084CD140D2F099EC6 /* Headers */,
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 6F6B7E6CF2E761253ED66AEB6031CF89 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F5746BBFF4D734120D9C04C6AA99EA2D /* Transition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6379D887CE91FF7E814A9314C3A2A69A /* Build configuration list for PBXNativeTarget "Transition" */;
+			buildPhases = (
+				77FF2489CBD9FEEBF1DDB842B8C09B7E /* Sources */,
+				7DA53BA215F80BDFBD348DBE7B199EFD /* Frameworks */,
+				58EAC54D09C2365A959F1C94A041B818 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -302,7 +429,7 @@
 			);
 			name = Transition;
 			productName = Transition;
-			productReference = 3AA6646647CEB3D15B49CB18A837613B /* Transition.framework */;
+			productReference = 71610E7335E1C80A66B3A6F01EC34E1D /* Transition.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -322,77 +449,109 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F3FD8FB1477C4E5AED0D501334F2FA91 /* Products */;
+			productRefGroup = FB5A29971C5C7D20F4D6253EB4A0A2D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A3D0B1BF4C2C50E00840F38064D8F90C /* Pods-woke */,
-				B2A3CE7AABA0783524AFD405440A299E /* Transition */,
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				7C91B98D7DC64A3752AEAB1EBBA2BF83 /* Pods-woke */,
+				F5746BBFF4D734120D9C04C6AA99EA2D /* Transition */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EC09152FD9F00D0A755728B94FD605BB /* Sources */ = {
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				099BECF684470913324FD8BD723DEFBB /* AnimationLayer.swift in Sources */,
-				6947ACEB5C9CDA1514AB6E42487397F1 /* AnimationRange+Helpers.swift in Sources */,
-				B38E2147F6ED2B24B6EFBFB34392212D /* AnimationRange.swift in Sources */,
-				F458384EA8BA5D77DBB938CCDB013E93 /* AnimationTimingParameters.swift in Sources */,
-				DFCCDA06D485ED600AC8E9B8700B5C80 /* DelegateProxy.swift in Sources */,
-				62A17AA8DE3C7BB6F843D60401614DC3 /* DissolveTransitionAnimation.swift in Sources */,
-				8B016419F3CB2AEF9A0E514973546296 /* EdgeTransitionAnimation.swift in Sources */,
-				A5FBFA50776B68B2CC9B50BABC34E65D /* InteractiveTransitionOperationDelegate.swift in Sources */,
-				E27FB8FC8B672DC7A245F22B6CEA9236 /* ModalPresentationControllerSource.swift in Sources */,
-				29E37761CC7D3A482D503087E1C70D51 /* MoveTransitionAnimation.swift in Sources */,
-				6B64D1E45BD6F42A61189F5CBCE140BD /* PanInteractionController.swift in Sources */,
-				772FD71887E4DFB139EC081155457C32 /* PushTransitionAnimation.swift in Sources */,
-				1BE97699CB48DAD46E3139131E48CA19 /* RevealTransitionAnimation.swift in Sources */,
-				5AEDC60CD8C2CFC7FADF0E7CDC2DF9B7 /* SharedElement.swift in Sources */,
-				450DE32DA9008753DEEAAA3667680F13 /* SharedElementTransition.swift in Sources */,
-				D74086B1CFA45D489AD201B1526082A3 /* Transition-dummy.m in Sources */,
-				256D438DCF5065CF144B65B76FF8125C /* Transition.swift in Sources */,
-				47AC34C1434B9CAC329BB9B9005FEA08 /* TransitionAnimation.swift in Sources */,
-				69A6A535CEA2451859105D55F8D7A95A /* TransitionCompletionCoordinator.swift in Sources */,
-				51DA84DCAF8D4D2F49AAAC12E5298A3F /* TransitionController.swift in Sources */,
-				83C1E71D13E7A08438AF4AFDBDFAC421 /* TransitionDriver.swift in Sources */,
-				47E73CA6807378EA57236EBBD2D925F6 /* TransitionEdges.swift in Sources */,
-				653A701A06781943D6E7657A5FFF2492 /* TransitionInteractionController.swift in Sources */,
-				1C998C96E1CF57F22EE911852F74A1AC /* TransitionOperation.swift in Sources */,
-				E52F53C83F6B3062BFD86775209D3DCE /* TransitionOperationContext.swift in Sources */,
-				39F2EC75E1FA2C5C39CFA282694F5941 /* TransitionPhaseDelegate.swift in Sources */,
-				0FC3D5B562227763F9E7AB65612BF6DE /* TransitionsSource.swift in Sources */,
-				544FD569970C11CF262810A22BF18698 /* UINavigationControllerDelegateProxy.swift in Sources */,
-				DB43C912FE543564FAD1184A66456C63 /* UITabBarControllerDelegateProxy.swift in Sources */,
-				AB5DBCEFB948EBBC19C91958F570C84C /* UIViewControllerContextTransitioning+Properties.swift in Sources */,
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFF157F5CA3578EFAFC9BB50F373C69F /* Sources */ = {
+		472A9F5023115F70421CAD3DFD8B5B7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04DD9DA15C2CF0D94B9F87C4DB193696 /* Pods-woke-dummy.m in Sources */,
+				F7F01C1F66CD99D817F09EA9BDD475B5 /* Pods-woke-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77FF2489CBD9FEEBF1DDB842B8C09B7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				918F1221C1D612DF1244C4E1FB3CBC34 /* AnimationLayer.swift in Sources */,
+				58CFB3C5EFC6625816308677ACBD295D /* AnimationRange+Helpers.swift in Sources */,
+				9443B21682FE1AEDE18135199A83AD56 /* AnimationRange.swift in Sources */,
+				F1D2F0C64B417A17D21E8C4CD7E46C05 /* AnimationTimingParameters.swift in Sources */,
+				7D41E1F043142D4D4ECA1048C59D7AD0 /* DelegateProxy.swift in Sources */,
+				70B338C2FAE0AD8EFF5B3F70C5167866 /* DissolveTransitionAnimation.swift in Sources */,
+				9C362DF67BD65315727F1B36787E0EEF /* EdgeTransitionAnimation.swift in Sources */,
+				EB2162408F55DA0391328ACBE7E5244E /* InteractiveTransitionOperationDelegate.swift in Sources */,
+				4FBB7AC45B663204B830EE0D2DC4F749 /* ModalPresentationControllerSource.swift in Sources */,
+				A6824FE0F1B10F14E7169FD33FE0C7A7 /* MoveTransitionAnimation.swift in Sources */,
+				79C5AEBF9360957D201289CF6BA3E548 /* PanInteractionController.swift in Sources */,
+				1EE33917C183E634FE750B3A38C8E97C /* PushTransitionAnimation.swift in Sources */,
+				D13DAAD27EAEF19BC8614C140550CDB2 /* RevealTransitionAnimation.swift in Sources */,
+				E7F97C83AF1608B759BA02E54F1DC3C9 /* SharedElement.swift in Sources */,
+				A58F3E5F5043CEFEE4AD78D2774DA7B5 /* SharedElementTransition.swift in Sources */,
+				0494266F5D6955BE4B098243767EE563 /* Transition-dummy.m in Sources */,
+				2D390CED1BFC33A179AFDA1A9B8C4FF2 /* Transition.swift in Sources */,
+				2D7E5976E38B8CB6BEE39AE923803DBB /* TransitionAnimation.swift in Sources */,
+				58B6F5BA6B416A6944C0B514BFB7670A /* TransitionCompletionCoordinator.swift in Sources */,
+				6807A13AE3D3ED1887226829B961102D /* TransitionController.swift in Sources */,
+				60D5777DC140BACD8E77A1CF5417243F /* TransitionDriver.swift in Sources */,
+				C93E32D6E7F4B5E74F83A83651D64142 /* TransitionEdges.swift in Sources */,
+				92A441BB9F82314955009D02288EAC80 /* TransitionInteractionController.swift in Sources */,
+				2F10DBB189478872BDF0234DBFF811E4 /* TransitionOperation.swift in Sources */,
+				1E76588C3E2B335BFF6491670F2E3181 /* TransitionOperationContext.swift in Sources */,
+				B157C919715BF838B73B9DD6696E8C1F /* TransitionPhaseDelegate.swift in Sources */,
+				0C17B82F56F07EBC5E7DE527F6E3E441 /* TransitionsSource.swift in Sources */,
+				98F4672744006CEC7EB139EB7ED848FA /* UINavigationControllerDelegateProxy.swift in Sources */,
+				35A32701C327617577F115AEC2B4D3DD /* UITabBarControllerDelegateProxy.swift in Sources */,
+				5AFB8B1E1791A319AC266F8B1304D2EA /* UIViewControllerContextTransitioning+Properties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0B508E5F9D075FED1FCC156E22E8682F /* PBXTargetDependency */ = {
+		56419620DC98404F64605324B04ECB5D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Transition;
-			target = B2A3CE7AABA0783524AFD405440A299E /* Transition */;
-			targetProxy = 6B2E9FB3EA2B26B7582462DD29D714B6 /* PBXContainerItemProxy */;
+			target = F5746BBFF4D734120D9C04C6AA99EA2D /* Transition */;
+			targetProxy = 393B2FF06E32C7798594C309FEA70579 /* PBXContainerItemProxy */;
+		};
+		F21618A9BFBE5225B1E040ACDFD0A3C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = 5CEF0164106068BDAEFC04623191A0F8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08417849BDEBEB6F53A3B6370891478B /* Release */ = {
+		4D1B9E2EA21EC14F9A28E9170803FA4B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCB0E1A85A514EEBD63456259B8E67BE /* Pods-woke.release.xcconfig */;
+			baseConfigurationReference = 31EC2C5D8A2F7013514117C8838A8641 /* Pods-woke.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -418,41 +577,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1F20939DE8FCBF5EC6CE25F4AC39278E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81056A8B0F11F830CED7B3FB5AAD3B4C /* Transition.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Transition/Transition-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Transition/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Transition/Transition.modulemap";
-				PRODUCT_MODULE_NAME = Transition;
-				PRODUCT_NAME = Transition;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -580,9 +706,42 @@
 			};
 			name = Release;
 		};
-		6DE3E42537A4C6BB34C03E4B2564EC8D /* Release */ = {
+		8457E152315E8592A79E7F4AA2E07870 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 81056A8B0F11F830CED7B3FB5AAD3B4C /* Transition.xcconfig */;
+			baseConfigurationReference = 26A715C9210CE1673872FDCE764E08A2 /* Transition.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Transition/Transition-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Transition/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Transition/Transition.modulemap";
+				PRODUCT_MODULE_NAME = Transition;
+				PRODUCT_NAME = Transition;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8D6A655C92FE730DEE96CE648A276180 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A715C9210CE1673872FDCE764E08A2 /* Transition.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -614,9 +773,42 @@
 			};
 			name = Release;
 		};
-		8ADE05AB7EA5CBB60650967FE91DAD8A /* Debug */ = {
+		A18C9CC7E37563F2891E7DC87F2DE6CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31EC2C5D8A2F7013514117C8838A8641 /* Pods-woke.debug.xcconfig */;
+			baseConfigurationReference = E50B2EB95EC551C0695960A7714D3BCF /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CDCDEF0CC36A72CDA8FD7A2F49FA112A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCB0E1A85A514EEBD63456259B8E67BE /* Pods-woke.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -642,8 +834,40 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EA0ADC75B20BB62958101306980460E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E50B2EB95EC551C0695960A7714D3BCF /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -662,20 +886,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD3734CF542DB894FB4909A14CA30CAA /* Build configuration list for PBXNativeTarget "Pods-woke" */ = {
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8ADE05AB7EA5CBB60650967FE91DAD8A /* Debug */,
-				08417849BDEBEB6F53A3B6370891478B /* Release */,
+				EA0ADC75B20BB62958101306980460E6 /* Debug */,
+				A18C9CC7E37563F2891E7DC87F2DE6CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED656FE5FE8D3DE453DAC49A6C4B568E /* Build configuration list for PBXNativeTarget "Transition" */ = {
+		6379D887CE91FF7E814A9314C3A2A69A /* Build configuration list for PBXNativeTarget "Transition" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F20939DE8FCBF5EC6CE25F4AC39278E /* Debug */,
-				6DE3E42537A4C6BB34C03E4B2564EC8D /* Release */,
+				8457E152315E8592A79E7F4AA2E07870 /* Debug */,
+				8D6A655C92FE730DEE96CE648A276180 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6ED981E3BF196EDCCF0740090333CBA3 /* Build configuration list for PBXNativeTarget "Pods-woke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D1B9E2EA21EC14F9A28E9170803FA4B /* Debug */,
+				CDCDEF0CC36A72CDA8FD7A2F49FA112A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

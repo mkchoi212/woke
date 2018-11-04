@@ -1,16 +1,20 @@
 PODS:
+  - Alamofire (4.7.3)
   - Transition (1.2.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Transition
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Transition
 
 SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Transition: 22d495b5fd0e14f3f6fd3be53a046a4a42d29654
 
-PODFILE CHECKSUM: 7a25877367ea58f416362794ec41b14cf0d96217
+PODFILE CHECKSUM: 3de1858d5d789005738848bdae9cc4465bda9151
 
 COCOAPODS: 1.5.3
