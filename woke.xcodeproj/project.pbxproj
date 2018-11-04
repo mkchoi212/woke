@@ -25,6 +25,7 @@
 		BAB2766A1E76A3A700C1EB95 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB276661E76A3A700C1EB95 /* CollectionViewController.swift */; };
 		BAB2766B1E76A3A700C1EB95 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */; };
 		BAB2766D1E76DA2800C1EB95 /* Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB2766C1E76DA2800C1EB95 /* Convenience.swift */; };
+		CA0977F5218F881F00FBC633 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0977F4218F881F00FBC633 /* User.swift */; };
 		CA178EC721877A6B004AD54B /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EBE21877A6A004AD54B /* FaveButton.swift */; };
 		CA178EC821877A6B004AD54B /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EC021877A6A004AD54B /* Geometry.swift */; };
 		CA178EC921877A6B004AD54B /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EC121877A6A004AD54B /* Easing.swift */; };
@@ -97,6 +98,7 @@
 		BAB276661E76A3A700C1EB95 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		BAB2766C1E76DA2800C1EB95 /* Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convenience.swift; sourceTree = "<group>"; };
+		CA0977F4218F881F00FBC633 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CA178EBE21877A6A004AD54B /* FaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveButton.swift; sourceTree = "<group>"; };
 		CA178EC021877A6A004AD54B /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		CA178EC121877A6A004AD54B /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				2D9B6A601E4210CD00E6CB48 /* Location.swift */,
 				BAB276611E76A38F00C1EB95 /* Item.swift */,
 				CA7B9F71218641610090044E /* DateManager.swift */,
+				CA0977F4218F881F00FBC633 /* User.swift */,
 				CAF51EBB2186BBA200E7B110 /* News */,
 				BAB276631E76A3A700C1EB95 /* CollectionView */,
 				2D2B777D1E3A49760059D762 /* Transition */,
@@ -412,6 +415,7 @@
 				CA178ECA21877A6B004AD54B /* Init.swift in Sources */,
 				2D9B6A5D1E42108000E6CB48 /* AppDelegate.swift in Sources */,
 				CA7B9F72218641610090044E /* DateManager.swift in Sources */,
+				CA0977F5218F881F00FBC633 /* User.swift in Sources */,
 				2D2B777F1E3A49880059D762 /* InteractiveZoomTransition.swift in Sources */,
 				CA178ECE21877A6B004AD54B /* Spark.swift in Sources */,
 				BAB2766B1E76A3A700C1EB95 /* CollectionViewLayout.swift in Sources */,
