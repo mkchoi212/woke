@@ -26,6 +26,8 @@
 		BAB2766B1E76A3A700C1EB95 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */; };
 		BAB2766D1E76DA2800C1EB95 /* Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB2766C1E76DA2800C1EB95 /* Convenience.swift */; };
 		CA0977F5218F881F00FBC633 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0977F4218F881F00FBC633 /* User.swift */; };
+		CA0977F7218F895C00FBC633 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0977F6218F895C00FBC633 /* SettingsViewController.swift */; };
+		CA0977FC218F8ADF00FBC633 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0977FB218F8ADF00FBC633 /* Settings.storyboard */; };
 		CA178EC721877A6B004AD54B /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EBE21877A6A004AD54B /* FaveButton.swift */; };
 		CA178EC821877A6B004AD54B /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EC021877A6A004AD54B /* Geometry.swift */; };
 		CA178EC921877A6B004AD54B /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA178EC121877A6A004AD54B /* Easing.swift */; };
@@ -99,6 +101,8 @@
 		BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		BAB2766C1E76DA2800C1EB95 /* Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convenience.swift; sourceTree = "<group>"; };
 		CA0977F4218F881F00FBC633 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CA0977F6218F895C00FBC633 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CA0977FB218F8ADF00FBC633 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		CA178EBE21877A6A004AD54B /* FaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveButton.swift; sourceTree = "<group>"; };
 		CA178EC021877A6A004AD54B /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		CA178EC121877A6A004AD54B /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				BAB276611E76A38F00C1EB95 /* Item.swift */,
 				CA7B9F71218641610090044E /* DateManager.swift */,
 				CA0977F4218F881F00FBC633 /* User.swift */,
+				CA0977FA218F8AA700FBC633 /* Settings */,
 				CAF51EBB2186BBA200E7B110 /* News */,
 				BAB276631E76A3A700C1EB95 /* CollectionView */,
 				2D2B777D1E3A49760059D762 /* Transition */,
@@ -212,6 +217,15 @@
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		CA0977FA218F8AA700FBC633 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CA0977FB218F8ADF00FBC633 /* Settings.storyboard */,
+				CA0977F6218F895C00FBC633 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		CA178EBC21877A5B004AD54B /* Fav Button */ = {
@@ -356,6 +370,7 @@
 				2D9B6A581E41E9B100E6CB48 /* Items.plist in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				CAF51EBA2186BB9800E7B110 /* News.storyboard in Resources */,
+				CA0977FC218F8ADF00FBC633 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +445,7 @@
 				BAB276681E76A3A700C1EB95 /* CollectionViewCell.swift in Sources */,
 				CAF51EBD2186BBAE00E7B110 /* NewsViewController.swift in Sources */,
 				CA3DA881218CCABA00503D65 /* ArticleViewLayout.swift in Sources */,
+				CA0977F7218F895C00FBC633 /* SettingsViewController.swift in Sources */,
 				2D2B77811E3A49B70059D762 /* FadeTransition.swift in Sources */,
 				CA7B9F70218641440090044E /* HeaderCollectionViewCell.swift in Sources */,
 				CA178ECD21877A6B004AD54B /* FaveIcon.swift in Sources */,

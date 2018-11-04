@@ -10,6 +10,10 @@ import UIKit
 import AVFoundation
 import GTSheet
 
+protocol Modalable {
+    func modallyPresent(view: UIViewController)
+}
+
 class CollectionViewController: UIViewController {
     
     static let margin: CGFloat = 10.0
@@ -95,6 +99,7 @@ class CollectionViewController: UIViewController {
             banner = HeaderCollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 80))
             guard let banner = banner else { return }
             
+            (banner as? HeaderCollectionViewCell)?.delegate = self
             banner.translatesAutoresizingMaskIntoConstraints = false
             banner.item = selected
             banner.container.backgroundColor = nil
@@ -225,5 +230,11 @@ extension CollectionViewController: UIGestureRecognizerDelegate {
             return navigationController.viewControllers.count > 1
         }
         return false
+    }
+}
+
+extension CollectionViewController: Modalable {
+    func modallyPresent(view: UIViewController) {
+        present(view, animated: true, completion: nil)
     }
 }

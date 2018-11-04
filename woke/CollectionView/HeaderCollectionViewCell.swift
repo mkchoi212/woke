@@ -67,6 +67,8 @@ class HeaderCollectionViewCell: CollectionViewCell {
         }
     }
     
+    var delegate: Modalable?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -84,7 +86,9 @@ class HeaderCollectionViewCell: CollectionViewCell {
     @objc func settingsPressed() {
         settingsExpanded = !settingsExpanded
         
-        
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let nc = storyboard.instantiateViewController(withIdentifier: "SettingsNC")
+        delegate?.modallyPresent(view: nc)
     }
     
     required init?(coder aDecoder: NSCoder) {
