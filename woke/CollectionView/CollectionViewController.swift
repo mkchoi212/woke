@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import GTSheet
+import Alamofire
 
 protocol Modalable {
     func modallyPresent(view: UIViewController)
@@ -63,6 +64,20 @@ class CollectionViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = UIColor.white
         navigationController?.interactivePopGestureRecognizer?.delegate = self
+        
+        let parameters: [String: Any] = [
+            "topic" : "worldTopic",
+            "collectionSize" : 10,
+            "polarity" : "left",
+        ]
+        
+        Alamofire.request("http://woke-api.loluvw.xyz:3000/getCollection", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                if response.result.isSuccess {
+                    print(response)
+                }
+        }
+        
         
         if let selected = selected {
             let margin = type(of: self).margin
