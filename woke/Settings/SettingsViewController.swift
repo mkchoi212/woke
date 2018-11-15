@@ -37,6 +37,7 @@ extension SettingsViewController {
     }
     
     func rateApp() {
+        // TODO
         let appID = "app_id_here"
         let urlStr = "itms-apps://itunes.apple.com/app/viewContentsUserReviews?id=\(appID)"
         
