@@ -74,7 +74,18 @@ class CollectionViewController: UIViewController {
         Alamofire.request("http://woke-api.loluvw.xyz:3000/getCollection", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
                 if response.result.isSuccess {
-                    print(response)
+                    if let responseArray = response.result.value as? [Any] {
+                        for item in responseArray {
+                            if let itemDict = item as? Dictionary<String, Any> {
+                                print(itemDict["description"] ?? "Not found")
+                            }
+                            print("---------------------------")
+                        }
+                    }
+                    else {
+                        print("Could not unwrap response.")
+                    }
+
                 }
         }
         
