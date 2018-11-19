@@ -26,39 +26,48 @@ import UIKit
 
 
 class Item {
-    class func allItems() -> [Item] {
-        var items = [Item]()
-        if let URL = Bundle.main.url(forResource: "Items", withExtension: "plist") {
-            if let itemsFromPlist = NSArray(contentsOf: URL) {
-                for dictionary in itemsFromPlist {
-                    let item = Item(dictionary: dictionary as! NSDictionary)
-                    items.append(item)
-                }
-            }
-        }
-        return items
-    }
     
     var title: String
     var image: UIImage
+    var url: URL
+    var author: String
+    var dateModified: String
+    var sourceTitle: String
+    var polarity: String
+    var body: String
     
-    init(title: String, image: UIImage) {
+    
+    init(title: String, image: UIImage, author: String, dateModified: String, sourceTitle: String, polarity: String, url: URL, body: String) {
         self.title = title
         self.image = image
+        self.url = url
+        self.author = author
+        self.dateModified = dateModified
+        self.sourceTitle = sourceTitle
+        self.polarity = polarity
+        self.body = body
     }
     
-    convenience init(dictionary: NSDictionary) {
-        let title = dictionary["Title"] as? String
+    convenience init(itemDict: Dictionary<String, Any>) {
+        let title = itemDict["title"] as? String ?? ""
+        let author = (itemDict["authors"] as? Array<String>)![0]
+        let dateModified = itemDict["date_modify"] as? String ?? ""
+        let polarityScore = itemDict["polarityScore"] as! Dictionary<String, Any>
+        let sourceTitle = polarityScore["sourceUrl"] as? String ?? ""
+        let polarity = polarityScore["allSidesBias"] as? String ?? ""
         
+        let urlText = itemDict["url"] as? String ?? ""
+        let url = URL(string: urlText)!
+        
+        let imageUrlText = itemDict["image_url"] as? String ?? ""
+        let imageUrl = URL(string: imageUrlText)
         
         let image: UIImage?
-        if let photo = dictionary["Photo"] as? String {
-            image = UIImage.random(i: Int(photo)!)
-        } else {
-            image = UIImage.random(i: 0)
-        }
+        image = UIImage.random(i: 0)
+        
+        let body = itemDict["text"] as! String
     
-        self.init(title: title ?? "", image: image!)
+        self.init(title: title, image: image!, author: author, dateModified: dateModified, sourceTitle: sourceTitle, polarity: polarity, url: url, body: body)
     }
     
     func heightForTitle(_ font: UIFont, width: CGFloat) -> CGFloat {

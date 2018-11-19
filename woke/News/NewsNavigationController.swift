@@ -11,6 +11,7 @@ import GTSheet
 
 class NewsNavigationController: UINavigationController, HalfSheetTopVCProviderProtocol {
     static let identifier = "NewsNC"
+    var item: Item?
     
     var topVCTransitionStyle: HalfSheetTopVCTransitionStyle {
         return .slide

@@ -18,6 +18,14 @@ class NewsViewController: UIViewController{
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mainTextLabel: UILabel!
     
+    lazy var item: Item? = {
+        let nc = (self.navigationController as? NewsNavigationController)
+        guard let parentItem = nc!.item else {
+            return nil
+        }
+        return parentItem
+    }()
+    
     lazy var likeButton: UIBarButtonItem = {
         let likeButton = FaveButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35),
                                     faveIconNormal: UIImage(named: "heart"))
@@ -65,6 +73,11 @@ class NewsViewController: UIViewController{
         
         navigationItem.leftBarButtonItems = [likeButton, shareButton]
         navigationItem.rightBarButtonItem = nextButton
+        
+        self.titleLabel.text = item?.title
+        self.authorLabel.text = item?.author
+        self.dateLabel.text = item?.dateModified
+        self.mainTextLabel.text = item?.body
     }
     
     @objc func showNextArticle() {

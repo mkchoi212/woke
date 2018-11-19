@@ -19,7 +19,7 @@ class CollectionViewController: UIViewController {
     
     static let margin: CGFloat = 10.0
     
-    let items = Item.allItems()
+    var items: [Item] = []
     var selected: Item?
     var selectedImage: UIImageView?
     var header: CollectionViewCell?
@@ -77,17 +77,23 @@ class CollectionViewController: UIViewController {
                     if let responseArray = response.result.value as? [Any] {
                         for item in responseArray {
                             if let itemDict = item as? Dictionary<String, Any> {
-                                print(itemDict["description"] ?? "Not found")
+                                let item = Item(itemDict: itemDict)
+                                self.items.append(item)
                             }
-                            print("---------------------------")
                         }
                     }
                     else {
                         print("Could not unwrap response.")
                     }
-
                 }
+                else {
+                    print("Request failed")
+                    print(response)
+                }
+                self.collectionView.reloadData()
+                print(self.items.count)
         }
+        
         
         
         if let selected = selected {
@@ -178,9 +184,12 @@ class CollectionViewController: UIViewController {
 
 extension CollectionViewController: HalfSheetPresentingProtocol {
     func display(item: Item) {
-        presentUsingHalfSheet(
-            UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: NewsNavigationController.identifier)
-        )
+        guard let nc = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: NewsNavigationController.identifier) as? NewsNavigationController else {
+            return
+        }
+        
+        nc.item = item
+        presentUsingHalfSheet(nc)
     }
 }
 
