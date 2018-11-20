@@ -50,7 +50,11 @@ class Item {
     
     convenience init(itemDict: Dictionary<String, Any>) {
         let title = itemDict["title"] as? String ?? ""
-        let author = (itemDict["authors"] as? Array<String>)![0]
+        let authorArray = itemDict["authors"] as? Array<String> ?? []
+        var author: String = "Unnamed"
+        if authorArray.count > 0 {
+            author = authorArray[0]
+        }
         let dateModified = itemDict["date_modify"] as? String ?? ""
         let polarityScore = itemDict["polarityScore"] as! Dictionary<String, Any>
         let sourceTitle = polarityScore["sourceUrl"] as? String ?? ""
