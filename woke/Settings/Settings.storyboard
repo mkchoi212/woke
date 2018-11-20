@@ -23,10 +23,23 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="68" id="Luc-zC-1Yw">
                                         <rect key="frame" x="0.0" y="55.5" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Luc-zC-1Yw" id="DE7-cT-pWU">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Luc-zC-1Yw" id="DE7-cT-pWU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" minimumValueImage="dem" maximumValueImage="rep" translatesAutoresizingMaskIntoConstraints="NO" id="QCW-4U-Uy5">
+                                                    <rect key="frame" x="34" y="19" width="307" height="31"/>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="QCW-4U-Uy5" secondAttribute="trailing" constant="20" id="A0r-OS-Uun"/>
+                                                <constraint firstItem="QCW-4U-Uy5" firstAttribute="centerY" secondItem="DE7-cT-pWU" secondAttribute="centerY" id="FSW-no-KMW"/>
+                                                <constraint firstItem="QCW-4U-Uy5" firstAttribute="leading" secondItem="DE7-cT-pWU" secondAttribute="leadingMargin" constant="20" id="vxm-IF-Z93"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -107,6 +120,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="slider" destination="QCW-4U-Uy5" id="nyp-Jo-aYs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hps-d3-PIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,4 +147,8 @@
             <point key="canvasLocation" x="152.80000000000001" y="12.143928035982009"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dem" width="25" height="22"/>
+        <image name="rep" width="25" height="21"/>
+    </resources>
 </document>

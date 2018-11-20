@@ -17,7 +17,6 @@
 		2D9B6A5F1E42108800E6CB48 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B6A5E1E42108800E6CB48 /* Router.swift */; };
 		2D9B6A611E4210CD00E6CB48 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9B6A601E4210CD00E6CB48 /* Location.swift */; };
 		4D4326F94151A8CF068BFE92 /* Pods_woke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408141D3C89D9F577666A456 /* Pods_woke.framework */; };
-		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		BAB276621E76A38F00C1EB95 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB276611E76A38F00C1EB95 /* Item.swift */; };
 		BAB276681E76A3A700C1EB95 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB276641E76A3A700C1EB95 /* CollectionViewCell.swift */; };
@@ -42,6 +41,7 @@
 		CA7B9F72218641610090044E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B9F71218641610090044E /* DateManager.swift */; };
 		CAAA27AC218BD627001DA28E /* GTSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA27A5218BD601001DA28E /* GTSheet.framework */; };
 		CAAA27AD218BD627001DA28E /* GTSheet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA27A5218BD601001DA28E /* GTSheet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAC9FD1821A377D500014578 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC9FD1721A377D500014578 /* Images.xcassets */; };
 		CAF51EBA2186BB9800E7B110 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF51EB92186BB9800E7B110 /* News.storyboard */; };
 		CAF51EBD2186BBAE00E7B110 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF51EBC2186BBAE00E7B110 /* NewsViewController.swift */; };
 		CAF51EBF2186BC4100E7B110 /* NewsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF51EBE2186BC4100E7B110 /* NewsNavigationController.swift */; };
@@ -91,7 +91,6 @@
 		408141D3C89D9F577666A456 /* Pods_woke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_woke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* woke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = woke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		61C15207365B5A2ED3417008 /* Pods-woke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-woke.release.xcconfig"; path = "Pods/Target Support Files/Pods-woke/Pods-woke.release.xcconfig"; sourceTree = "<group>"; };
 		BAB276611E76A38F00C1EB95 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -113,9 +112,11 @@
 		CA178EC621877A6B004AD54B /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
 		CA3DA880218CCABA00503D65 /* ArticleViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewLayout.swift; sourceTree = "<group>"; };
 		CA3DA882218CCBE400503D65 /* ArticleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA68E08721A367E1007233E7 /* woke-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "woke-Bridging-Header.h"; path = "woke/woke-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA7B9F71218641610090044E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		CAAA27A0218BD601001DA28E /* GTSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GTSheet.xcodeproj; sourceTree = "<group>"; };
+		CAC9FD1721A377D500014578 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAF51EB92186BB9800E7B110 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		CAF51EBC2186BBAE00E7B110 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		CAF51EBE2186BC4100E7B110 /* NewsNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNavigationController.swift; sourceTree = "<group>"; };
@@ -212,7 +213,8 @@
 		BAE314AD1E76983000CB3F00 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				CAC9FD1721A377D500014578 /* Images.xcassets */,
+				CA68E08721A367E1007233E7 /* woke-Bridging-Header.h */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -367,8 +369,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				CAC9FD1821A377D500014578 /* Images.xcassets in Resources */,
 				2D9B6A581E41E9B100E6CB48 /* Items.plist in Resources */,
-				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				CAF51EBA2186BB9800E7B110 /* News.storyboard in Resources */,
 				CA0977FC218F8ADF00FBC633 /* Settings.storyboard in Resources */,
 			);
@@ -592,6 +594,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjc.woke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "woke/woke-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -609,6 +612,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mjc.woke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "woke/woke-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
