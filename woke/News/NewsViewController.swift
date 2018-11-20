@@ -105,8 +105,7 @@ class NewsViewController: UIViewController{
 
 extension NewsViewController: FaveButtonDelegate {
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
-
-        User.update(by: 2.0)
+        User.update(by: 1.0)
         print(User.score)
     }
 }
