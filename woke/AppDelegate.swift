@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        router = Router(start: .collection(nil))
+        router = Router(start: .home)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = router.navigationController

@@ -38,3 +38,18 @@ extension CollectionViewController: TransitionPhaseDelegate {
         collectionView.panGestureRecognizer.isEnabled = true
     }
 }
+
+extension HomeCollectionViewController: TransitionPhaseDelegate {
+    
+    func willTransition(from fromViewController: UIViewController, to toViewController: UIViewController, with sharedElement: SharedElement?) {
+        collectionView.panGestureRecognizer.isEnabled = false
+    }
+    
+    func didTransition(from fromViewController: UIViewController, to toViewController: UIViewController, with sharedElement: SharedElement?) {
+        collectionView.panGestureRecognizer.isEnabled = true
+    }
+    
+    func cancelledTransition(from fromViewController: UIViewController, to toViewController: UIViewController, with sharedElement: SharedElement?) {
+        collectionView.panGestureRecognizer.isEnabled = true
+    }
+}

@@ -25,30 +25,26 @@
 import UIKit
 
 
-class Item {
+struct Item {
     
     var title: String
-    var image: UIImage
     var url: URL
     var author: String
     var dateModified: String
     var sourceTitle: String
     var polarity: String
     var body: String
+    var imageURL: URL?
+    var image: UIImage?
     
-    
-    init(title: String, image: UIImage, author: String, dateModified: String, sourceTitle: String, polarity: String, url: URL, body: String) {
-        self.title = title
-        self.image = image
-        self.url = url
-        self.author = author
-        self.dateModified = dateModified
-        self.sourceTitle = sourceTitle
-        self.polarity = polarity
-        self.body = body
+    func heightForTitle(_ font: UIFont, width: CGFloat) -> CGFloat {
+        let rect = NSString(string: title).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        return ceil(rect.height)
     }
-    
-    convenience init(itemDict: Dictionary<String, Any>) {
+}
+
+extension Item : Equatable {
+    init(itemDict: Dictionary<String, Any>) {
         let title = itemDict["title"] as? String ?? ""
         let authorArray = itemDict["authors"] as? Array<String> ?? []
         var author: String = "Unnamed"
@@ -66,27 +62,17 @@ class Item {
         let imageUrlText = itemDict["image_url"] as? String ?? ""
         let imageUrl = URL(string: imageUrlText)
         
-        let image: UIImage?
-        image = UIImage.random(i: 0)
-        
         let body = itemDict["text"] as! String
-    
-        self.init(title: title, image: image!, author: author, dateModified: dateModified, sourceTitle: sourceTitle, polarity: polarity, url: url, body: body)
-    }
-    
-    func heightForTitle(_ font: UIFont, width: CGFloat) -> CGFloat {
-        let rect = NSString(string: title).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
-        return ceil(rect.height)
+        
+        self.init(title: title, url: url, author: author, dateModified: dateModified, sourceTitle: sourceTitle, polarity: polarity, body: body, imageURL: imageUrl, image: nil)
     }
     
     static func == (lhs: Item, rhs: Item) -> Bool {
         switch (lhs, rhs) {
-        case (let leftItem, let rightItem): return leftItem.image == rightItem.image
+        case (let leftItem, let rightItem): return leftItem.title == rightItem.title
         }
     }
 }
-
-extension Item : Equatable {}
 
 extension UIImage {
     static func random(i: Int) -> UIImage? {

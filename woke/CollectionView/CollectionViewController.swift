@@ -23,7 +23,6 @@ class CollectionViewController: UIViewController {
     var selected: Item?
     var selectedImage: UIImageView?
     var header: CollectionViewCell?
-    var banner: CollectionViewCell?
     var targetFrame: CGRect = .zero
     
     var transitionManager: HalfSheetPresentationManager!
@@ -54,9 +53,12 @@ class CollectionViewController: UIViewController {
         return collectionView
     }()
     
-    convenience init(with item: Item? = nil) {
+    var category: String?
+    
+    convenience init(with category: String? = nil) {
         self.init()
-        selected = item
+        self.category = category
+        self.selectedImage?.image = UIImage(named: category!)
     }
     
     override func viewDidLoad() {
@@ -66,11 +68,11 @@ class CollectionViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         let parameters: [String: Any] = [
-            "topic" : "worldTopic",
+            "topic" : category!,
             "collectionSize" : 10,
             "polarity" : "left",
         ]
-        
+    
         Alamofire.request("http://woke-api.loluvw.xyz:3000/getCollection", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
                 if response.result.isSuccess {
@@ -91,74 +93,41 @@ class CollectionViewController: UIViewController {
                     print(response)
                 }
                 self.collectionView.reloadData()
-                print(self.items.count)
         }
         
+        let margin = type(of: self).margin
         
+        header = CollectionViewCell(frame: .zero)
+        guard let header = header else { return }
+        header.translatesAutoresizingMaskIntoConstraints = false
+        header.item = selected
+        header.container.backgroundColor = nil
+        header.image.layer.cornerRadius = 6
+        header.titleLabel.font = UIFont.systemFont(ofSize: 16)
+        header.titleLabel.textColor = .black
+        header.image.image = UIImage(named: category!)
+        view.addSubview(header)
         
-        if let selected = selected {
-            let margin = type(of: self).margin
-            
-            header = CollectionViewCell(frame: .zero)
-            guard let header = header else { return }
-            header.translatesAutoresizingMaskIntoConstraints = false
-            header.item = selected
-            header.container.backgroundColor = nil
-            header.image.layer.cornerRadius = 6
-            header.titleLabel.font = UIFont.systemFont(ofSize: 16)
-            header.titleLabel.textColor = .black
-            view.addSubview(header)
-            
-            let boundingRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - (2 * margin), height: CGFloat(MAXFLOAT))
-            let height = AVMakeRect(aspectRatio: selected.image.size, insideRect: boundingRect).height
-            
-            var contentInset = collectionView.contentInset
-            contentInset.top += height
-            collectionView.contentInset = contentInset
-            
-            NSLayoutConstraint.activate([
-                header.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: margin),
-                header.leftAnchor.constraint(equalTo: view.safeLeftAnchor, constant: margin),
-                header.rightAnchor.constraint(equalTo: view.safeRightAnchor, constant: -margin),
-                header.heightAnchor.constraint(equalToConstant: height)
-                ])
-            
-            collectionView.collectionViewLayout = articleLayout
-            header.layoutIfNeeded()
-            view.layoutIfNeeded()
-        } else {
-            let margin = type(of: self).margin
-            banner = HeaderCollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 80))
-            guard let banner = banner else { return }
-            
-            (banner as? HeaderCollectionViewCell)?.delegate = self
-            banner.translatesAutoresizingMaskIntoConstraints = false
-            banner.item = selected
-            banner.container.backgroundColor = nil
-            view.addSubview(banner)
-            
-            let height = CGFloat(80)
-            var contentInset = collectionView.contentInset
-            contentInset.top += height
-            collectionView.contentInset = contentInset
-            
-            NSLayoutConstraint.activate([
-                banner.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: margin),
-                banner.leftAnchor.constraint(equalTo: view.safeLeftAnchor, constant: margin),
-                banner.rightAnchor.constraint(equalTo: view.safeRightAnchor, constant: -margin),
-                banner.heightAnchor.constraint(equalToConstant: height)
-                ])
-            
-            collectionView.collectionViewLayout = homeLayout
-            banner.layoutIfNeeded()
-            view.layoutIfNeeded()
-        }
+        //let boundingRect = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width - (2 * margin), height: CGFloat(MAXFLOAT))
+        //let height = AVMakeRect(aspectRatio: selected.image.size, insideRect: boundingRect).height
+        // TODO MASSIVE HACK
+        let height: CGFloat = 150.0
+        var contentInset = collectionView.contentInset
+        contentInset.top += height
+        collectionView.contentInset = contentInset
         
-        if let header = header {
-            view.insertSubview(collectionView, belowSubview: header)
-        } else if let banner = banner {
-            view.insertSubview(collectionView, belowSubview: banner)
-        }
+        NSLayoutConstraint.activate([
+            header.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: margin),
+            header.leftAnchor.constraint(equalTo: view.safeLeftAnchor, constant: margin),
+            header.rightAnchor.constraint(equalTo: view.safeRightAnchor, constant: -margin),
+            header.heightAnchor.constraint(equalToConstant: height)
+            ])
+        
+        collectionView.collectionViewLayout = articleLayout
+        header.layoutIfNeeded()
+        view.layoutIfNeeded()
+        
+        view.insertSubview(collectionView, belowSubview: header)
         
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: view.safeTopAnchor, constant: 10),
@@ -171,10 +140,6 @@ class CollectionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     var hasFocus: Bool {
@@ -200,13 +165,12 @@ extension CollectionViewController: UICollectionViewDataSource, UIScrollViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let identifier = selected == nil ? CollectionViewCell.reuseIdentifier: ArticleCollectionViewCell.reuseIdentifier
+        let identifier = ArticleCollectionViewCell.reuseIdentifier
         return collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         header?.layer.transform = CATransform3DMakeTranslation(0, -scrollView.contentOffset.y - scrollView.contentInset.top, 0)
-        banner?.layer.transform = CATransform3DMakeTranslation(0, -scrollView.contentOffset.y - scrollView.contentInset.top, 0)
     }
 }
 
@@ -217,21 +181,29 @@ extension CollectionViewController: UICollectionViewDelegate {
             return
         }
         
-        if selected == nil {
-            if let cell = collectionView.cellForItem(at: indexPath) as? Displayable {
-                targetFrame = view.convert(cell.image.frame, from: cell.image)
-                selectedImage = cell.image
-            }
-            app?.router.go(to: .collection(item))
-        } else {
-            display(item: item)
-        }
+        display(item: item)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if var cell = cell as? Displayable, let item = items[safe: indexPath.item] {
-            cell.item = item
+        guard var cell = cell as? Displayable, let item = items[safe: indexPath.item] else {
+            return
         }
+        cell.item = item
+        
+        guard let imageURL = item.imageURL, item.image == nil else {
+            return
+        }
+        
+        Alamofire.request(imageURL, method: .get).validate().responseData(completionHandler: { (responseData) in
+            if responseData.error != nil {
+                return
+            }
+            DispatchQueue.main.async {
+                let image = UIImage(data: responseData.data!)
+                cell.item?.image = image
+                cell.image.image = UIImage(data: responseData.data!)
+            }
+        })
     }
 }
 
@@ -240,8 +212,11 @@ extension CollectionViewController: CollectionViewLayoutDelegate {
     func collectionView(_ collectionView:UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
         let item = items[indexPath.item]
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
-   
-        let rect = AVMakeRect(aspectRatio: item.image.size, insideRect: boundingRect)
+        if item.image == nil {
+            return 100.0
+        }
+        
+        let rect = AVMakeRect(aspectRatio: item.image!.size, insideRect: boundingRect)
         if selected == nil {
             return rect.height
         } else {

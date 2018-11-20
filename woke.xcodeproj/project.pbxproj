@@ -41,6 +41,8 @@
 		CA7B9F72218641610090044E /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B9F71218641610090044E /* DateManager.swift */; };
 		CAAA27AC218BD627001DA28E /* GTSheet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA27A5218BD601001DA28E /* GTSheet.framework */; };
 		CAAA27AD218BD627001DA28E /* GTSheet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CAAA27A5218BD601001DA28E /* GTSheet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CAAD861721A4690A000DF577 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD861621A4690A000DF577 /* HomeCollectionViewController.swift */; };
+		CAAD861921A475E7000DF577 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAD861821A475E7000DF577 /* Animatable.swift */; };
 		CAC9FD1821A377D500014578 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAC9FD1721A377D500014578 /* Images.xcassets */; };
 		CAF51EBA2186BB9800E7B110 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF51EB92186BB9800E7B110 /* News.storyboard */; };
 		CAF51EBD2186BBAE00E7B110 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF51EBC2186BBAE00E7B110 /* NewsViewController.swift */; };
@@ -116,6 +118,8 @@
 		CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		CA7B9F71218641610090044E /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 		CAAA27A0218BD601001DA28E /* GTSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GTSheet.xcodeproj; sourceTree = "<group>"; };
+		CAAD861621A4690A000DF577 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		CAAD861821A475E7000DF577 /* Animatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
 		CAC9FD1721A377D500014578 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAF51EB92186BB9800E7B110 /* News.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		CAF51EBC2186BBAE00E7B110 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -201,11 +205,13 @@
 			children = (
 				BAB276661E76A3A700C1EB95 /* CollectionViewController.swift */,
 				BAB276651E76A3A700C1EB95 /* CollectionViewController+Transition.swift */,
+				CAAD861621A4690A000DF577 /* HomeCollectionViewController.swift */,
 				BAB276641E76A3A700C1EB95 /* CollectionViewCell.swift */,
 				CA3DA882218CCBE400503D65 /* ArticleCollectionViewCell.swift */,
 				CA7B9F6F218641440090044E /* HeaderCollectionViewCell.swift */,
 				BAB276671E76A3A700C1EB95 /* CollectionViewLayout.swift */,
 				CA3DA880218CCABA00503D65 /* ArticleViewLayout.swift */,
+				CAAD861821A475E7000DF577 /* Animatable.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -437,6 +443,7 @@
 				CA178ECE21877A6B004AD54B /* Spark.swift in Sources */,
 				BAB2766B1E76A3A700C1EB95 /* CollectionViewLayout.swift in Sources */,
 				CA178EC821877A6B004AD54B /* Geometry.swift in Sources */,
+				CAAD861721A4690A000DF577 /* HomeCollectionViewController.swift in Sources */,
 				CA178EC721877A6B004AD54B /* FaveButton.swift in Sources */,
 				CA3DA883218CCBE400503D65 /* ArticleCollectionViewCell.swift in Sources */,
 				BAB276621E76A38F00C1EB95 /* Item.swift in Sources */,
@@ -448,6 +455,7 @@
 				CAF51EBD2186BBAE00E7B110 /* NewsViewController.swift in Sources */,
 				CA3DA881218CCABA00503D65 /* ArticleViewLayout.swift in Sources */,
 				CA0977F7218F895C00FBC633 /* SettingsViewController.swift in Sources */,
+				CAAD861921A475E7000DF577 /* Animatable.swift in Sources */,
 				2D2B77811E3A49B70059D762 /* FadeTransition.swift in Sources */,
 				CA7B9F70218641440090044E /* HeaderCollectionViewCell.swift in Sources */,
 				CA178ECD21877A6B004AD54B /* FaveIcon.swift in Sources */,

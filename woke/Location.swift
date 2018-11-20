@@ -26,28 +26,35 @@ import UIKit
 
 
 enum Location: Equatable {
-    case collection(Item?)
+    case collection(String)
+    case home
     
     var controller: UIViewController {
         switch self {
-        case .collection(let item): return CollectionViewController(with: item)
+        case .home: return HomeCollectionViewController()
+        case .collection(let category): return CollectionViewController(with: category)
         }
     }
     
     static func == (lhs: Location, rhs: Location) -> Bool {
         switch (lhs, rhs) {
-        case (.collection(let leftItem), .collection(let rightItem)):
-            guard let leftItem = leftItem, let rightItem = rightItem else { return false }
-            return leftItem == rightItem
+        case (.collection, .home):
+            return false
+        case (.home, .collection):
+            return false
+        case (.home, .home):
+            return true
+        case (.collection, .collection):
+            return true
         }
     }
 }
 
 extension Location {
-    
     func title() -> String {
         switch self {
         case .collection: return "collection"
+        case .home: return "home"
         }
     }
 }
