@@ -8,6 +8,7 @@
 
 import UIKit
 import GTSheet
+import Alamofire
 
 enum Tag: Int {
     case like, dislike
@@ -21,6 +22,7 @@ class NewsViewController: UIViewController{
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var mainTextLabel: UILabel!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     lazy var item: Item? = {
         let nc = (self.navigationController as? NewsNavigationController)
@@ -99,6 +101,7 @@ class NewsViewController: UIViewController{
         self.authorLabel.text = item?.author
         self.dateLabel.text = item?.dateModified
         self.mainTextLabel.text = item?.body
+        
     }
     
     @objc func showNextArticle() {
