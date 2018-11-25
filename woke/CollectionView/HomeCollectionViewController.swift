@@ -15,17 +15,18 @@ struct Category {
     let description: String
     
     static let all = [
-        Category(name: "worldTopic", description: "World"),
-        Category(name: "domesticTopic", description: "Domestic"),
-        Category(name: "trumpTopic", description: "Trump")
+        Category(name: "world", description: "World"),
+        Category(name: "domestic", description: "Domestic"),
+        Category(name: "trump", description: "Trump"),
+        Category(name: "technology", description: "Technology"),
+        Category(name: "entertainment", description: "Entertainment")
     ]
 }
 
-class HomeCollectionViewController: UIViewController {
-    
+class HomeCollectionViewController: UIViewController, Animatable {
     static let margin: CGFloat = 10.0
     
-    var banner: CollectionViewCell?
+    var header: CollectionViewCell?
     var targetFrame: CGRect = .zero
     var selectedImage: UIImageView?
     
@@ -62,8 +63,8 @@ class HomeCollectionViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.delegate = self
 
         let margin = type(of: self).margin
-        banner = HeaderCollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 80))
-        guard let banner = banner else { return }
+        header = HeaderCollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 80))
+        guard let banner = header else { return }
         
         (banner as? HeaderCollectionViewCell)?.delegate = self
         banner.translatesAutoresizingMaskIntoConstraints = false
@@ -125,7 +126,7 @@ extension HomeCollectionViewController: UICollectionViewDataSource, UIScrollView
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        banner?.layer.transform = CATransform3DMakeTranslation(0, -scrollView.contentOffset.y - scrollView.contentInset.top, 0)
+        header?.layer.transform = CATransform3DMakeTranslation(0, -scrollView.contentOffset.y - scrollView.contentInset.top, 0)
     }
 }
 
@@ -158,7 +159,7 @@ extension HomeCollectionViewController: UICollectionViewDelegate {
 extension HomeCollectionViewController: CollectionViewLayoutDelegate {
     
     func collectionView(_ collectionView:UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
-        return 300
+        return 150
     }
     
     func collectionView(_ collectionView: UICollectionView, heightForAnnotationAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {

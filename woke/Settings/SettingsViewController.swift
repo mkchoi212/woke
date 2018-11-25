@@ -56,7 +56,7 @@ extension SettingsViewController {
         let alert = UIAlertController(title: title, message: "Do you really want to reset your statistics?", preferredStyle: UIAlertControllerStyle.alert)
         
         let ok = UIAlertAction(title: "OK", style: .destructive) { _ in
-            User.save(score: 0)
+            User.clearScores()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         _ = [ok, cancel].map{ alert.addAction($0) }

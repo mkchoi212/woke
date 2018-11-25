@@ -28,20 +28,33 @@ class NewsViewController: UIViewController{
     
     lazy var likeButton: UIBarButtonItem = {
         let likeButton = FaveButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35),
-                                    faveIconNormal: UIImage(named: "heart"))
+                                    faveIconNormal: UIImage(named: "thumbs-up"))
         likeButton.delegate = self
         NSLayoutConstraint.activate([
             likeButton.widthAnchor.constraint(equalToConstant: 35),
             likeButton.heightAnchor.constraint(equalToConstant: 35)
         ])
+        likeButton.selectedColor = #colorLiteral(red: 0.007762347814, green: 0.4766914248, blue: 0.9985215068, alpha: 1)
         return UIBarButtonItem(customView: likeButton)
+    }()
+    
+    lazy var dislikeButton: UIBarButtonItem = {
+        let dislikeButton = FaveButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35),
+                                    faveIconNormal: UIImage(named: "thumbs-down"))
+        dislikeButton.delegate = self
+        NSLayoutConstraint.activate([
+            dislikeButton.widthAnchor.constraint(equalToConstant: 35),
+            dislikeButton.heightAnchor.constraint(equalToConstant: 35)
+            ])
+        
+        dislikeButton.selectedColor = #colorLiteral(red: 0.9995418191, green: 0.2292047143, blue: 0.1865143478, alpha: 1)
+        return UIBarButtonItem(customView: dislikeButton)
     }()
     
     lazy var shareButton: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .action , target: self, action: #selector(shareArticle))
     }()
     
-    // TODO REPLACE MAGICAL FRAME NUMBERS
     lazy var nextButton: UIBarButtonItem = {
         let button =  UIButton(type: .custom)
         button.setImage(#imageLiteral(resourceName: "next_arrow"), for: .normal)
@@ -71,7 +84,7 @@ class NewsViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.leftBarButtonItems = [likeButton, shareButton]
+        navigationItem.leftBarButtonItems = [likeButton, dislikeButton, shareButton]
         navigationItem.rightBarButtonItem = nextButton
         
         self.titleLabel.text = item?.title
@@ -105,7 +118,8 @@ class NewsViewController: UIViewController{
 
 extension NewsViewController: FaveButtonDelegate {
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
-        User.update(by: 1.0)
+        // TODO
+        User.update(by: 1)
         print(User.score)
     }
 }

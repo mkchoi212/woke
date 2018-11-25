@@ -24,7 +24,7 @@
 import UIKit
 import Transition
 
-extension CollectionViewController: TransitionPhaseDelegate {
+extension HomeCollectionViewController: TransitionPhaseDelegate {
     
     func willTransition(from fromViewController: UIViewController, to toViewController: UIViewController, with sharedElement: SharedElement?) {
         collectionView.panGestureRecognizer.isEnabled = false
@@ -39,7 +39,7 @@ extension CollectionViewController: TransitionPhaseDelegate {
     }
 }
 
-extension HomeCollectionViewController: TransitionPhaseDelegate {
+extension CollectionViewController: TransitionPhaseDelegate {
     
     func willTransition(from fromViewController: UIViewController, to toViewController: UIViewController, with sharedElement: SharedElement?) {
         collectionView.panGestureRecognizer.isEnabled = false

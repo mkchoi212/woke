@@ -58,8 +58,8 @@ final class InteractiveZoomTransitionController: InteractiveNavigationTransition
 extension InteractiveZoomTransitionController : SharedElementProvider {
     
     func sharedElementForInteractiveTransition(with interactionController: TransitionInteractionController, in operationContext: TransitionOperationContext) -> SharedElement? {
-        guard let toViewController = operationContext.context.toViewController as? CollectionViewController else { return nil }
-        guard let fromViewController = operationContext.context.fromViewController as? CollectionViewController else { return nil }
+        guard let toViewController = operationContext.context.toViewController as? Animatable else { return nil }
+        guard let fromViewController = operationContext.context.fromViewController as? Animatable else { return nil }
         guard let header = operationContext.operation.isPresenting ? toViewController.header : fromViewController.header else { return nil }
         
         let isPresenting = operationContext.operation.isPresenting
@@ -89,7 +89,8 @@ extension InteractiveZoomTransitionController {
         switch operation {
         case .pop:
             navigationController.popViewController(animated: true)
-        default: return
+        default:
+            return
         }
     }
 }
@@ -105,7 +106,7 @@ extension InteractiveZoomTransitionController {
         
         let translationIsVertical = (translation.y > 0) && (abs(translation.y) > abs(translation.x))
         if translationIsVertical && (navigationController.viewControllers.count > 1) {
-            if let topViewController = navigationController.topViewController as? CollectionViewController {
+            if let topViewController = navigationController.topViewController as? (UIViewController & Animatable) {
                 if let hitView = topViewController.view.hitTest(gestureRecognizer.location(in: topViewController.view), with: nil),
                 let header = topViewController.header, hitView == header.container {
                     return .navigation(.pop)

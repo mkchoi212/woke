@@ -61,7 +61,7 @@ class InteractiveZoomTransition : SharedElementTransition {
         guard let itemImageView = item.imageView else { return }
         
         /// The selectedImage is 
-        if isPresenting, let fromViewController = context.fromViewController as? CollectionViewController, let selectedImage = fromViewController.selectedImage {
+        if isPresenting, let fromViewController = context.fromViewController as? HomeCollectionViewController, let selectedImage = fromViewController.selectedImage {
             self.selectedImage = selectedImage
         } else if !isPresenting, let toViewController = context.toViewController as? CollectionViewController, let selectedImage = toViewController.selectedImage {
             self.selectedImage = selectedImage

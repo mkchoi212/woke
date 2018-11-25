@@ -8,6 +8,9 @@
 
 import UIKit
 
-protocol Animatable  {
+protocol Animatable {
     var selectedImage: UIImageView? { get }
+    var collectionView: UICollectionView { get }
+    var header: CollectionViewCell? { get }
+    var targetFrame: CGRect { get }
 }

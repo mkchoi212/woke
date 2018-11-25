@@ -12,15 +12,25 @@
 import Foundation
 
 struct User {
-    static let key = "USER_SCORE"
+    private static let key = "USER_SCORE"
+    private static let uuid_key = "USER_UUIID"
     
-    static func score() -> Double {
-        let score = UserDefaults.standard.double(forKey: User.key)
-        return score == 0.0 ? 3.5 : score
+    private static func scoreArray() -> [Int] {
+        guard let scores = UserDefaults.standard.array(forKey: User.key) as? [Int] else {
+            return []
+        }
+        
+        return scores
     }
     
-    static func save(score: Double) {
-        UserDefaults.standard.set(score, forKey: User.key)
+    static func score() -> Double {
+        let scores = User.scoreArray()
+        
+        if scores.count == 0 {
+            return 3.5
+        } else {
+            return Double(scores.reduce(0, +)) / Double(scores.count)
+        }
     }
     
     static func stringRepresentation() -> String {
@@ -57,17 +67,26 @@ struct User {
         }
     }
     
-    static func update(by weight: Double) -> Double {
-        let oldScore = User.score()
-        let scalingFactor = 0.1
+    static func update(by score: Int) {
+        var scores = User.scoreArray()
+        scores.append(score)
         
-        let bias = (weight - oldScore) * scalingFactor
-        var newScore = oldScore + bias
+        UserDefaults.standard.set(scores, forKey: User.key)
+    }
+    
+    static func clearScores() {
+        UserDefaults.standard.set([], forKey: User.key)
+    }
+}
+
+extension User {
+    static func uuid() -> String {
+        guard let id = UserDefaults.standard.string(forKey: User.uuid_key) else {
+            let new_id = UUID().uuidString
+            UserDefaults.standard.set(new_id, forKey: User.uuid_key)
+            return new_id
+        }
         
-        newScore = max(newScore, 1.0)
-        newScore = min(newScore, 6.0)
-        
-        User.save(score: newScore)
-        return newScore
+        return id
     }
 }

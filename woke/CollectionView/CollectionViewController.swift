@@ -15,7 +15,7 @@ protocol Modalable {
     func modallyPresent(view: UIViewController)
 }
 
-class CollectionViewController: UIViewController {
+class CollectionViewController: UIViewController, Animatable {
     
     static let margin: CGFloat = 10.0
     
@@ -69,28 +69,27 @@ class CollectionViewController: UIViewController {
         
         let parameters: [String: Any] = [
             "topic" : category!,
-            "collectionSize" : 10,
-            "polarity" : "left",
+            "collectionSize" : 15,
+            "uuid": User.uuid()
         ]
     
-        Alamofire.request("http://woke-api.loluvw.xyz:3000/getCollection", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        Alamofire.request("http://woke-api.loluvw.xyz:3000/getUserArticles", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
-                if response.result.isSuccess {
-                    if let responseArray = response.result.value as? [Any] {
-                        for item in responseArray {
-                            if let itemDict = item as? Dictionary<String, Any> {
-                                let item = Item(itemDict: itemDict)
-                                self.items.append(item)
-                            }
-                        }
-                    }
-                    else {
-                        print("Could not unwrap response.")
-                    }
+                if !response.result.isSuccess {
+                    return
                 }
-                else {
-                    print("Request failed")
-                    print(response)
+                
+                guard let responseDict = response.result.value as? [String:Any] else {
+                    return
+                }
+                
+                guard let articles = responseDict["articles"] as? [Dictionary<String,Any>] else {
+                    return
+                }
+                
+                for article in articles {
+                    let item = Item(itemDict: article)
+                    self.items.append(item)
                 }
                 self.collectionView.reloadData()
         }
