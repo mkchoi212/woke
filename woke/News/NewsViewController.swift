@@ -9,6 +9,10 @@
 import UIKit
 import GTSheet
 
+enum Tag: Int {
+    case like, dislike
+}
+
 class NewsViewController: UIViewController{
     static let identifier = "NewsVC"
     
@@ -25,10 +29,12 @@ class NewsViewController: UIViewController{
         }
         return parentItem
     }()
-    
+
     lazy var likeButton: UIBarButtonItem = {
         let likeButton = FaveButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35),
                                     faveIconNormal: UIImage(named: "thumbs-up"))
+        likeButton.tag = Tag.like.rawValue
+        
         likeButton.delegate = self
         NSLayoutConstraint.activate([
             likeButton.widthAnchor.constraint(equalToConstant: 35),
@@ -41,6 +47,8 @@ class NewsViewController: UIViewController{
     lazy var dislikeButton: UIBarButtonItem = {
         let dislikeButton = FaveButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35),
                                     faveIconNormal: UIImage(named: "thumbs-down"))
+        dislikeButton.tag = Tag.dislike.rawValue
+        
         dislikeButton.delegate = self
         NSLayoutConstraint.activate([
             dislikeButton.widthAnchor.constraint(equalToConstant: 35),
@@ -102,25 +110,34 @@ class NewsViewController: UIViewController{
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         
         let textToShare = "Check out this news article!"
-        
-        if let articleLink = URL(string: "http://cnn.com") {
-            let objectsToShare = [textToShare, articleLink] as [Any]
-            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-            
-            //Excluded Activities
-            activityVC.excludedActivityTypes = [UIActivityType.saveToCameraRoll]
-            
-            activityVC.popoverPresentationController?.sourceView = sender
-            self.present(activityVC, animated: true, completion: nil)
+        if item == nil {
+            return
         }
+        
+        let objectsToShare = [textToShare, item!.url] as [Any]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        
+        //Excluded Activities
+        activityVC.excludedActivityTypes = [UIActivityType.saveToCameraRoll]
+        
+        activityVC.popoverPresentationController?.sourceView = sender
+        self.present(activityVC, animated: true, completion: nil)
     }
 }
 
 extension NewsViewController: FaveButtonDelegate {
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
         // TODO
-        User.update(by: 1)
-        print(User.score)
+        if !selected {
+            return
+        }
+        
+        let tag = faveButton.tag
+        if tag == Tag.like.rawValue {
+            User.update(by: 1)
+        } else if tag == Tag.dislike.rawValue {
+            User.update(by: 1)
+        }
     }
 }
 
