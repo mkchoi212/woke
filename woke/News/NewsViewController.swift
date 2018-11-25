@@ -98,10 +98,15 @@ class NewsViewController: UIViewController{
         navigationItem.rightBarButtonItem = nextButton
         
         self.titleLabel.text = item?.title
-        self.authorLabel.text = item?.author
+        let sourceTitle = item?.sourceTitle ?? "Unnamed"
+        if let author = item?.author {
+            self.authorLabel.text = "\(author), \(sourceTitle)"
+        }
+        else {
+            self.authorLabel.text = sourceTitle
+        }
         self.dateLabel.text = item?.dateModified
         self.mainTextLabel.text = item?.body
-        
     }
     
     @objc func showNextArticle() {
