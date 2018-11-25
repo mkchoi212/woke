@@ -36,6 +36,7 @@ struct Item {
     var body: String
     var imageURL: URL?
     var image: UIImage?
+    var articleId: String?
     
     func heightForTitle(_ font: UIFont, width: CGFloat) -> CGFloat {
         let rect = NSString(string: title).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
@@ -64,7 +65,9 @@ extension Item : Equatable {
         
         let body = itemDict["text"] as! String
         
-        self.init(title: title, url: url, author: author, dateModified: dateModified, sourceTitle: sourceTitle, polarity: polarity, body: body, imageURL: imageUrl, image: nil)
+        let articleId = itemDict["_id"] as! String
+        
+        self.init(title: title, url: url, author: author, dateModified: dateModified, sourceTitle: sourceTitle, polarity: polarity, body: body, imageURL: imageUrl, image: nil, articleId: articleId)
     }
     
     static func == (lhs: Item, rhs: Item) -> Bool {

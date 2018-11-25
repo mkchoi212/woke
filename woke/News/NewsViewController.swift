@@ -141,9 +141,40 @@ extension NewsViewController: FaveButtonDelegate {
         }
         
         let tag = faveButton.tag
+        
+        let parameters: [String: Any] = [
+            "uuid" : User.uuid(),
+            "articleId": item!.articleId!
+        ]
+        
         if tag == Tag.like.rawValue {
+            print(item!.articleId!)
+            Alamofire.request("http://woke-api.loluvw.xyz:3000/loveArticle", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                .responseJSON { response in
+                    if !response.result.isSuccess {
+                        return
+                    }
+                    guard let responseDict = response.result.value as? [String:Any] else {
+                        return
+                    }
+                    let newEstimatedBias = responseDict["estimatedBias"] as! Int
+                    print(newEstimatedBias)
+            }
             User.update(by: 1)
-        } else if tag == Tag.dislike.rawValue {
+        }
+        else if tag == Tag.dislike.rawValue {
+            Alamofire.request("http://woke-api.loluvw.xyz:3000/hateArticle", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                .responseJSON { response in
+                    if !response.result.isSuccess {
+                        return
+                    }
+                    
+                    guard let responseDict = response.result.value as? [String:Any] else {
+                        return
+                    }
+                    let newEstimatedBias = responseDict["estimatedBias"] as! Int
+                    print(newEstimatedBias)
+            }
             User.update(by: 1)
         }
     }
