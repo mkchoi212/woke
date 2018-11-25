@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.7.3)
+  - LoadingPlaceholderView (0.0.2)
   - Transition (1.2.0)
 
 DEPENDENCIES:
   - Alamofire
+  - LoadingPlaceholderView
   - Transition
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - LoadingPlaceholderView
     - Transition
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  LoadingPlaceholderView: e913f5ae2673612d405ce395acca7cedb1bfaa81
   Transition: 22d495b5fd0e14f3f6fd3be53a046a4a42d29654
 
-PODFILE CHECKSUM: 3de1858d5d789005738848bdae9cc4465bda9151
+PODFILE CHECKSUM: c0bb01c2415d8e270e253ad8840ce9bfc52fc403
 
 COCOAPODS: 1.5.3

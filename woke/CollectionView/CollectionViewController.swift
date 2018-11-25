@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import GTSheet
 import Alamofire
+import LoadingPlaceholderView
 
 protocol Modalable {
     func modallyPresent(view: UIViewController)
@@ -40,7 +41,7 @@ class CollectionViewController: UIViewController, Animatable {
     }()
     
     lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: homeLayout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: articleLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = nil
         collectionView.alwaysBounceVertical = true
@@ -51,6 +52,13 @@ class CollectionViewController: UIViewController, Animatable {
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
         collectionView.register(ArticleCollectionViewCell.self, forCellWithReuseIdentifier: ArticleCollectionViewCell.reuseIdentifier)
         return collectionView
+    }()
+    
+    lazy var loadingPlaceholderView: LoadingPlaceholderView = {
+        var placeholder = LoadingPlaceholderView()
+        placeholder.gradientColor = .white
+        placeholder.backgroundColor = .white
+        return placeholder
     }()
     
     var category: String?
@@ -73,6 +81,9 @@ class CollectionViewController: UIViewController, Animatable {
             "uuid": User.uuid()
         ]
     
+        // Hide
+        loadingPlaceholderView.cover(view)
+        
         Alamofire.request("http://woke-api.loluvw.xyz:3000/getUserArticles", method: .post, parameters: parameters, encoding: JSONEncoding.default)
             .responseJSON { response in
                 if !response.result.isSuccess {
@@ -91,6 +102,8 @@ class CollectionViewController: UIViewController, Animatable {
                     let item = Item(itemDict: article)
                     self.items.append(item)
                 }
+                
+                self.loadingPlaceholderView.uncover(animated: true)
                 self.collectionView.reloadData()
         }
         
@@ -122,7 +135,6 @@ class CollectionViewController: UIViewController, Animatable {
             header.heightAnchor.constraint(equalToConstant: height)
             ])
         
-        collectionView.collectionViewLayout = articleLayout
         header.layoutIfNeeded()
         view.layoutIfNeeded()
         
@@ -134,6 +146,7 @@ class CollectionViewController: UIViewController, Animatable {
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             collectionView.rightAnchor.constraint(equalTo: view.safeRightAnchor)
             ])
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -160,7 +173,7 @@ extension CollectionViewController: HalfSheetPresentingProtocol {
 extension CollectionViewController: UICollectionViewDataSource, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return items.count == 0 ? 10 : items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -209,6 +222,10 @@ extension CollectionViewController: UICollectionViewDelegate {
 extension CollectionViewController: CollectionViewLayoutDelegate {
     
     func collectionView(_ collectionView:UICollectionView, heightForItemAtIndexPath indexPath: NSIndexPath, withWidth width: CGFloat) -> CGFloat {
+        if indexPath.row >= items.count {
+            return 100.0
+        }
+        
         let item = items[indexPath.item]
         let boundingRect = CGRect(x: 0, y: 0, width: width, height: CGFloat(MAXFLOAT))
         if item.image == nil {

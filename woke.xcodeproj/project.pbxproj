@@ -411,11 +411,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-woke/Pods-woke-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/LoadingPlaceholderView/LoadingPlaceholderView.framework",
 				"${BUILT_PRODUCTS_DIR}/Transition/Transition.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LoadingPlaceholderView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Transition.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
