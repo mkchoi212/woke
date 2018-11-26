@@ -56,50 +56,21 @@ class CollectionViewController: UIViewController, Animatable {
     }()
     
     var category: String?
-    
+
     convenience init(with category: String? = nil) {
         self.init()
         self.category = category
         self.selectedImage?.image = UIImage(named: category!)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshFeed(notification:)), name: NSNotification.Name(rawValue: "RefreshFeed"), object: nil)
+        
         automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = UIColor.white
         navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        let parameters: [String: Any] = [
-            "topic" : category!,
-            "collectionSize" : 15,
-            "uuid": User.uuid()
-        ]
-    
-        // Hide
-        loadingPlaceholderView.cover(view)
-        
-        Alamofire.request("http://woke-api.loluvw.xyz:3000/getUserArticles", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .responseJSON { response in
-                if !response.result.isSuccess {
-                    return
-                }
-                
-                guard let responseDict = response.result.value as? [String:Any] else {
-                    return
-                }
-                
-                guard let articles = responseDict["articles"] as? [Dictionary<String,Any>] else {
-                    return
-                }
-                
-                for article in articles {
-                    let item = Item(itemDict: article)
-                    self.items.append(item)
-                }
-                
-                self.loadingPlaceholderView.uncover(animated: true)
-                self.collectionView.reloadData()
-        }
         
         let margin = type(of: self).margin
         
@@ -141,6 +112,7 @@ class CollectionViewController: UIViewController, Animatable {
             collectionView.rightAnchor.constraint(equalTo: view.safeRightAnchor)
             ])
         
+        grabArticles()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -150,6 +122,45 @@ class CollectionViewController: UIViewController, Animatable {
     
     var hasFocus: Bool {
         return selected != nil
+    }
+    
+    @objc func refreshFeed(notification: Notification) {
+        grabArticles()
+    }
+    
+    func grabArticles() {
+        let parameters: [String: Any] = [
+            "topic" : category!,
+            "collectionSize" : 15,
+            "uuid": User.uuid()
+        ]
+        
+        // Hide
+        loadingPlaceholderView.cover(view)
+        
+        Alamofire.request("http://woke-api.loluvw.xyz:3000/getUserArticles", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseJSON { response in
+                if !response.result.isSuccess {
+                    return
+                }
+                
+                guard let responseDict = response.result.value as? [String:Any] else {
+                    return
+                }
+                
+                guard let articles = responseDict["articles"] as? [Dictionary<String,Any>] else {
+                    return
+                }
+                
+                self.items = []
+                for article in articles {
+                    let item = Item(itemDict: article)
+                    self.items.append(item)
+                }
+                
+                self.loadingPlaceholderView.uncover(animated: true)
+                self.collectionView.reloadData()
+        }
     }
 }
 

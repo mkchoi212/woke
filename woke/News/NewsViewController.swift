@@ -15,7 +15,7 @@ enum Tag: Int {
     case like, dislike
 }
 
-class NewsViewController: UIViewController{
+class NewsViewController: UIViewController {
     static let identifier = "NewsVC"
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -115,6 +115,8 @@ class NewsViewController: UIViewController{
         return barButton
     }()
     
+    var shouldRefresh: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -161,17 +163,19 @@ class NewsViewController: UIViewController{
         activityVC.popoverPresentationController?.sourceView = sender
         self.present(activityVC, animated: true, completion: nil)
     }
+    
+    
 }
 
 extension NewsViewController: FaveButtonDelegate {
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
-        // TODO
         if !selected {
             return
         }
         
-        let tag = faveButton.tag
+        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "RefreshFeed"),object: nil))
         
+        let tag = faveButton.tag
         let parameters: [String: Any] = [
             "uuid" : User.uuid(),
             "articleId": item!.articleId!
@@ -190,8 +194,7 @@ extension NewsViewController: FaveButtonDelegate {
                     User.set(score: newEstimatedBias)
                     print(newEstimatedBias)
             }
-        }
-        else if tag == Tag.dislike.rawValue {
+        } else if tag == Tag.dislike.rawValue {
             Alamofire.request("http://woke-api.loluvw.xyz:3000/hateArticle", method: .post, parameters: parameters, encoding: JSONEncoding.default)
                 .responseJSON { response in
                     if !response.result.isSuccess {
