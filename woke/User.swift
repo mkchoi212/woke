@@ -15,6 +15,7 @@ struct User {
     private static let key = "USER_SCORE"
     private static let written = "SCORE_WRITTEN"
     private static let uuid_key = "USER_UUIID"
+    private static let history = "USER_VOTED"
     
     static func score() -> Double {
         let defaults = UserDefaults.standard
@@ -77,5 +78,19 @@ extension User {
         }
         
         return id
+    }
+    
+    static func historyDictionary() -> [String:Bool] {
+        guard let history = UserDefaults.standard.dictionary(forKey: User.history) as? [String:Bool] else {
+            return [:]
+        }
+        
+        return history
+    }
+
+    static func save(article: String, status: Bool) {
+        var history = User.historyDictionary()
+        history[article] = status
+        UserDefaults.standard.set(history, forKey: User.history)
     }
 }

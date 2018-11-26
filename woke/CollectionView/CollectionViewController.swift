@@ -66,6 +66,9 @@ class CollectionViewController: UIViewController, Animatable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = category!.uppercased()
+        navigationController?.navigationBar.topItem?.title = ""
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.refreshFeed(notification:)), name: NSNotification.Name(rawValue: "RefreshFeed"), object: nil)
         
         automaticallyAdjustsScrollViewInsets = false
@@ -117,7 +120,7 @@ class CollectionViewController: UIViewController, Animatable {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = false
     }
     
     var hasFocus: Bool {

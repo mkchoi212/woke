@@ -132,10 +132,22 @@ class NewsViewController: UIViewController {
             dismiss(animated: true, completion: nil)
             return
         }
-        self.titleLabel.text = cur.title
-        self.authorLabel.text = "\(cur.author), \(cur.sourceTitle)"
-        self.dateLabel.text = cur.dateModified
-        self.mainTextLabel.text = cur.body
+        titleLabel.text = cur.title
+        authorLabel.text = "\(cur.author), \(cur.sourceTitle)"
+        dateLabel.text = cur.dateModified
+        mainTextLabel.text = cur.body
+        
+        let history = User.historyDictionary()
+        guard let userOpinion = history[cur.articleId!] else {
+            _ = [likeButton, dislikeButton].map{ ($0.customView as? FaveButton)?.setSelected(selected: false, animated: false) }
+            return
+        }
+        
+        if userOpinion {
+            (likeButton.customView as? FaveButton)?.setSelected(selected: true, animated: false)
+        } else {
+            (dislikeButton.customView as? FaveButton)?.setSelected(selected: true, animated: false)
+        }
     }
     
     @objc func showNextArticle() {
@@ -163,8 +175,6 @@ class NewsViewController: UIViewController {
         activityVC.popoverPresentationController?.sourceView = sender
         self.present(activityVC, animated: true, completion: nil)
     }
-    
-    
 }
 
 extension NewsViewController: FaveButtonDelegate {
@@ -181,7 +191,9 @@ extension NewsViewController: FaveButtonDelegate {
             "articleId": item!.articleId!
         ]
         
+        
         if tag == Tag.like.rawValue {
+            User.save(article: item!.articleId!, status: true)
             Alamofire.request("http://woke-api.loluvw.xyz:3000/loveArticle", method: .post, parameters: parameters, encoding: JSONEncoding.default)
                 .responseJSON { response in
                     if !response.result.isSuccess {
@@ -195,6 +207,7 @@ extension NewsViewController: FaveButtonDelegate {
                     print(newEstimatedBias)
             }
         } else if tag == Tag.dislike.rawValue {
+            User.save(article: item!.articleId!, status: false)
             Alamofire.request("http://woke-api.loluvw.xyz:3000/hateArticle", method: .post, parameters: parameters, encoding: JSONEncoding.default)
                 .responseJSON { response in
                     if !response.result.isSuccess {

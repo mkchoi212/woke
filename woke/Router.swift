@@ -28,7 +28,6 @@ import Transition
 struct Router {
     
     let navigationController: UINavigationController
-    let transitionController: InteractiveZoomTransitionController
     var current: Location
     
     init(start location: Location) {
@@ -39,7 +38,15 @@ struct Router {
         navigationController.view.layer.cornerRadius = 6
         navigationController.view.clipsToBounds = true
         
-        transitionController = InteractiveZoomTransitionController(with: navigationController)
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.navigationBar.tintColor = .black
+        
+        navigationController.navigationBar.titleTextAttributes = [
+            NSAttributedStringKey.foregroundColor: UIColor.black,
+             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20, weight: .heavy)
+        ]
     }
     
     mutating func go(to location: Location) {
