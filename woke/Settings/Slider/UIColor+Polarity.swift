@@ -28,15 +28,15 @@ extension UIColor {
     
     convenience init(polarity: Double) {
         switch polarity {
-        case 0.0 ... 1.0:
+        case 0.0 ... 0.9:
             self.init(red: 0, green: 122, blue: 255)
-        case 1.1 ... 2.0:
+        case 1.0 ... 1.9:
             self.init(red: 90, green: 200, blue: 250)
-        case 2.1 ... 3.0:
+        case 2.0 ... 2.9:
             self.init(red: 76, green: 217, blue: 100)
-        case 3.1 ... 4.0:
+        case 3.0 ... 3.9:
             self.init(red: 88, green: 86, blue: 214)
-        case 4.1 ... 5.0:
+        case 4.0 ... 5.0:
             self.init(red: 255, green: 59, blue: 48)
         default:
             fatalError("Invalid user score range")

@@ -5,8 +5,8 @@
 //  Created by Mike Choi on 11/4/18.
 //  Copyright © 2018 Mike Choi. All rights reserved.
 //
-// User score ranges from 0.0 to 4.0 [0, 1, 2, 3, 4]
-// with default score being 2.0 (moderate)
+// User score ranges from 1.0 to 5.0 [1, 2, 3, 4, 5]
+// with default score being 2.5 (moderate)
 //
 
 import Foundation
@@ -21,7 +21,7 @@ struct User {
         let defaults = UserDefaults.standard
         
         let isWritten = defaults.bool(forKey: User.written)
-        return isWritten ? defaults.double(forKey: User.key) : 2.0
+        return isWritten ? defaults.double(forKey: User.key) : 2.5
     }
     
     static func stringRepresentation() -> String {
