@@ -31,6 +31,8 @@ class CollectionViewCell: UICollectionViewCell, Displayable {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.clipsToBounds = true
         image.contentMode = .scaleAspectFill
+        image.layer.cornerRadius = 8
+        image.clipsToBounds = true
         return image
     }()
     
@@ -40,7 +42,7 @@ class CollectionViewCell: UICollectionViewCell, Displayable {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.textAlignment = .center
         titleLabel.textColor = .darkGray
-        titleLabel.font = UIFont.systemFont(ofSize: 12)
+        titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .bold)
         return titleLabel
     }()
     

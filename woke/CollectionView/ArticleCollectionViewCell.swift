@@ -37,8 +37,27 @@ class ArticleCollectionViewCell: UICollectionViewCell, Displayable {
         return titleLabel
     }()
     
+    lazy var dateLabel: UILabel = {
+        let dateLabel = UILabel()
+        dateLabel.translatesAutoresizingMaskIntoConstraints = false
+        dateLabel.numberOfLines = 1
+        dateLabel.textAlignment = .left
+        dateLabel.textColor = .darkGray
+        dateLabel.font = UIFont.systemFont(ofSize: 10)
+        return dateLabel
+    }()
+    
+    lazy var textStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, dateLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.alignment = .leading
+        stackView.spacing = 20.0
+        return stackView
+    }()
+    
     lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [image, titleLabel])
+        let stackView = UIStackView(arrangedSubviews: [image, textStackView])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.spacing = 12.0
@@ -51,6 +70,7 @@ class ArticleCollectionViewCell: UICollectionViewCell, Displayable {
             guard let item = item else { return }
             image.image = item.image
             titleLabel.text = item.title
+            dateLabel.text = item.dateModified.relativeTime
         }
     }
     

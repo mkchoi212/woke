@@ -134,7 +134,7 @@ class NewsViewController: UIViewController {
         }
         titleLabel.text = cur.title
         authorLabel.text = "\(cur.author), \(cur.sourceTitle)"
-        dateLabel.text = cur.dateModified
+        dateLabel.text = cur.dateModified.asString
         mainTextLabel.text = cur.body
         
         let history = User.historyDictionary()
@@ -154,6 +154,7 @@ class NewsViewController: UIViewController {
         loadingPlaceholderView.cover(view, animated: true)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.scrollView.setContentOffset(.zero, animated: false)
             self?.idx += 1
             self?.setupNewsView()
             self?.loadingPlaceholderView.uncover(animated: true)

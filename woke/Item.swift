@@ -26,11 +26,12 @@ import UIKit
 
 
 struct Item {
+    static let dateFormatter = DateFormatter()
     
     var title: String
     var url: URL
     var author: String
-    var dateModified: String
+    var dateModified: Date
     var sourceTitle: String
     var polarity: String
     var body: String
@@ -52,7 +53,15 @@ extension Item : Equatable {
         if authorArray.count > 0 {
             author = authorArray[0]
         }
-        let dateModified = itemDict["date_modify"] as? String ?? ""
+        
+        Item.dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        var articleDate: Date
+        if let date = Item.dateFormatter.date(from: itemDict["date_modify"] as? String ?? "") {
+            articleDate = date
+        } else {
+            articleDate = Date()
+        }
+
         let polarityScore = itemDict["polarityScore"] as! Dictionary<String, Any>
         let sourceTitle = polarityScore["sourceUrl"] as? String ?? ""
         let polarity = polarityScore["allSidesBias"] as? String ?? ""
@@ -67,7 +76,7 @@ extension Item : Equatable {
         
         let articleId = itemDict["_id"] as! String
         
-        self.init(title: title, url: url, author: author, dateModified: dateModified, sourceTitle: sourceTitle, polarity: polarity, body: body, imageURL: imageUrl, image: nil, articleId: articleId)
+        self.init(title: title, url: url, author: author, dateModified: articleDate, sourceTitle: sourceTitle, polarity: polarity, body: body, imageURL: imageUrl, image: nil, articleId: articleId)
     }
     
     static func == (lhs: Item, rhs: Item) -> Bool {
