@@ -6,4 +6,5 @@ target 'woke' do
   pod 'Transition'
   pod 'Alamofire'
   pod 'LoadingPlaceholderView'
+  pod 'pop'
 end

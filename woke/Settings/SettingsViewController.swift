@@ -10,15 +10,12 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
     static let identifier = "SettingsVC"
-    @IBOutlet weak var slider: UISlider!
-    
+    @IBOutlet weak var slider: Slider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        slider.minimumValue = 1
-        slider.maximumValue = 5
-        slider.setValue(Float(User.score()), animated: false)
+
+        setupSlider()
     }
     
     @IBAction func cancelPressed() {
@@ -66,6 +63,34 @@ extension SettingsViewController {
         _ = [ok, cancel].map{ alert.addAction($0) }
         
         present(alert, animated: true, completion: nil)
+    }
+}
+
+extension SettingsViewController {
+    private func setupSlider() {
+         let labelTextAttributes: [NSAttributedString.Key : Any] = [
+            .font: UIFont.systemFont(ofSize: 12, weight: .bold), .foregroundColor: UIColor.white
+        ]
+        
+        slider.attributedTextForFraction = { fraction in
+            let formatter = NumberFormatter()
+            formatter.maximumIntegerDigits = 1
+            formatter.maximumFractionDigits = 1
+            let string = formatter.string(from: (fraction * 5.0) as NSNumber) ?? ""
+            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 12, weight: .bold), .foregroundColor: UIColor.black])
+        }
+        slider.setMinimumImage(UIImage(named: "dem"))
+        slider.setMaximumImage(UIImage(named: "rep"))
+        
+        slider.imagesColor = UIColor.white.withAlphaComponent(0.8)
+        slider.setMinimumLabelAttributedText(NSAttributedString(string: "", attributes: labelTextAttributes))
+        slider.setMaximumLabelAttributedText(NSAttributedString(string: "", attributes: labelTextAttributes))
+        slider.fraction = CGFloat(User.score() / 5.0)
+        slider.shadowOffset = CGSize(width: 0, height: 10)
+        slider.shadowBlur = 5
+        slider.shadowColor = UIColor(white: 0, alpha: 0.1)
+        slider.contentViewColor = UIColor(polarity: User.score())
+        slider.valueViewColor = .white
     }
 }
 
