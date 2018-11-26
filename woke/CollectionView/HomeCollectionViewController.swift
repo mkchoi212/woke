@@ -36,12 +36,6 @@ class HomeCollectionViewController: UIViewController, Animatable {
         return layout
     }()
     
-    lazy var articleLayout: UICollectionViewLayout = {
-        var layout = ArticleViewLayout()
-        layout.delegate = self
-        return layout
-    }()
-    
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: homeLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -83,7 +77,6 @@ class HomeCollectionViewController: UIViewController, Animatable {
             banner.heightAnchor.constraint(equalToConstant: height)
             ])
         
-        collectionView.collectionViewLayout = homeLayout
         banner.layoutIfNeeded()
         view.layoutIfNeeded()
         

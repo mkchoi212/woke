@@ -76,7 +76,7 @@ extension SettingsViewController {
             let formatter = NumberFormatter()
             formatter.maximumIntegerDigits = 1
             formatter.maximumFractionDigits = 1
-            let string = formatter.string(from: (fraction * 5.0) as NSNumber) ?? ""
+            let string = "Me"
             return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 12, weight: .bold), .foregroundColor: UIColor.black])
         }
         slider.setMinimumImage(UIImage(named: "dem"))

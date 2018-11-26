@@ -27,13 +27,7 @@ class CollectionViewController: UIViewController, Animatable {
     var targetFrame: CGRect = .zero
     
     var transitionManager: HalfSheetPresentationManager!
-    
-    lazy var homeLayout: UICollectionViewLayout = {
-        var layout = CollectionViewLayout()
-        layout.delegate = self
-        return layout
-    }()
-    
+
     lazy var articleLayout: UICollectionViewLayout = {
         var layout = ArticleViewLayout()
         layout.delegate = self
@@ -109,7 +103,7 @@ class CollectionViewController: UIViewController, Animatable {
         
         let margin = type(of: self).margin
         
-        header = CollectionViewCell(frame: .zero)
+        header = CollectionViewCell(frame: CGRect(x: 0, y: 0, width: 100, height: 150))
         guard let header = header else { return }
         header.translatesAutoresizingMaskIntoConstraints = false
         header.item = selected
@@ -160,12 +154,18 @@ class CollectionViewController: UIViewController, Animatable {
 }
 
 extension CollectionViewController: HalfSheetPresentingProtocol {
-    func display(item: Item) {
+    func display(idx: Int) {
         guard let nc = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: NewsNavigationController.identifier) as? NewsNavigationController else {
             return
         }
         
-        nc.item = item
+        if idx >= items.count {
+            fatalError("Out of bounds on items array in CollectionViewController")
+        }
+        
+        nc.items = items
+        nc.selectedIdx = idx
+        nc.category = self.category
         presentUsingHalfSheet(nc)
     }
 }
@@ -189,11 +189,7 @@ extension CollectionViewController: UICollectionViewDataSource, UIScrollViewDele
 extension CollectionViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let item = items[safe: indexPath.item] else {
-            return
-        }
-        
-        display(item: item)
+        display(idx: indexPath.item)
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

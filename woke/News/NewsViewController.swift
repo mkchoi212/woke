@@ -9,6 +9,7 @@
 import UIKit
 import GTSheet
 import Alamofire
+import LoadingPlaceholderView
 
 enum Tag: Int {
     case like, dislike
@@ -24,12 +25,36 @@ class NewsViewController: UIViewController{
     @IBOutlet weak var mainTextLabel: UILabel!
     @IBOutlet weak var logoImageView: UIImageView!
     
-    lazy var item: Item? = {
-        let nc = (self.navigationController as? NewsNavigationController)
-        guard let parentItem = nc!.item else {
-            return nil
+    lazy var idx: Int = {
+        let nc = (self.navigationController as! NewsNavigationController)
+        return nc.selectedIdx!
+    }()
+    
+    var item: Item? {
+        get {
+            if idx >= items.count {
+                return nil
+            } else {
+                return items[idx]
+            }
         }
-        return parentItem
+    }
+    
+    lazy var items: [Item] = {
+        let nc = (self.navigationController as? NewsNavigationController)
+        return nc!.items!
+    }()
+    
+    lazy var category: String = {
+        let nc = (self.navigationController as! NewsNavigationController)
+        return nc.category!
+    }()
+    
+    lazy var loadingPlaceholderView: LoadingPlaceholderView = {
+        var placeholder = LoadingPlaceholderView()
+        placeholder.gradientColor = .white
+        placeholder.backgroundColor = .white
+        return placeholder
     }()
 
     lazy var likeButton: UIBarButtonItem = {
@@ -72,9 +97,8 @@ class NewsViewController: UIViewController{
         button.addTarget(self, action: #selector(showNextArticle), for: .touchUpInside)
         
         let label = UILabel(frame: CGRect(x: -110, y: -12, width: 100, height: 40))
-        let categoryName = "CATEGORY"
-        let labelText = "NEXT IN\n\(categoryName)"
-        label.attributedText = labelText.attributedString(nonBoldRange: NSRange(location: 8, length: categoryName.count), fontSize: 12)
+        let labelText = "NEXT IN\n\(category.uppercased())"
+        label.attributedText = labelText.attributedString(nonBoldRange: NSRange(location: 8, length: category.count), fontSize: 12)
         label.numberOfLines = 0
         label.textAlignment = .right
         label.textColor = .black
@@ -96,20 +120,30 @@ class NewsViewController: UIViewController{
         
         navigationItem.leftBarButtonItems = [likeButton, dislikeButton, shareButton]
         navigationItem.rightBarButtonItem = nextButton
+
         
-        self.titleLabel.text = item?.title
-        let sourceTitle = item?.sourceTitle ?? "Unnamed"
-        if let author = item?.author {
-            self.authorLabel.text = "\(author), \(sourceTitle)"
-        } else {
-            self.authorLabel.text = sourceTitle
+        setupNewsView()
+    }
+    
+    func setupNewsView() {
+        guard let cur = item else {
+            dismiss(animated: true, completion: nil)
+            return
         }
-        self.dateLabel.text = item?.dateModified
-        self.mainTextLabel.text = item?.body
+        self.titleLabel.text = cur.title
+        self.authorLabel.text = "\(cur.author), \(cur.sourceTitle)"
+        self.dateLabel.text = cur.dateModified
+        self.mainTextLabel.text = cur.body
     }
     
     @objc func showNextArticle() {
+        loadingPlaceholderView.cover(view, animated: true)
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.idx += 1
+            self?.setupNewsView()
+            self?.loadingPlaceholderView.uncover(animated: true)
+        }
     }
     
     @objc func shareArticle(sender:UIView) {
@@ -117,9 +151,6 @@ class NewsViewController: UIViewController{
         view.layer.render(in: UIGraphicsGetCurrentContext()!)
         
         let textToShare = "Check out this news article!"
-        if item == nil {
-            return
-        }
         
         let objectsToShare = [textToShare, item!.url] as [Any]
         let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
@@ -147,7 +178,6 @@ extension NewsViewController: FaveButtonDelegate {
         ]
         
         if tag == Tag.like.rawValue {
-            print(item!.articleId!)
             Alamofire.request("http://woke-api.loluvw.xyz:3000/loveArticle", method: .post, parameters: parameters, encoding: JSONEncoding.default)
                 .responseJSON { response in
                     if !response.result.isSuccess {
