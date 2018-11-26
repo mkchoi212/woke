@@ -101,8 +101,7 @@ class NewsViewController: UIViewController{
         let sourceTitle = item?.sourceTitle ?? "Unnamed"
         if let author = item?.author {
             self.authorLabel.text = "\(author), \(sourceTitle)"
-        }
-        else {
+        } else {
             self.authorLabel.text = sourceTitle
         }
         self.dateLabel.text = item?.dateModified
@@ -157,10 +156,10 @@ extension NewsViewController: FaveButtonDelegate {
                     guard let responseDict = response.result.value as? [String:Any] else {
                         return
                     }
-                    let newEstimatedBias = responseDict["estimatedBias"] as! Int
+                    let newEstimatedBias = responseDict["estimatedBias"] as! Double
+                    User.set(score: newEstimatedBias)
                     print(newEstimatedBias)
             }
-            User.update(by: 1)
         }
         else if tag == Tag.dislike.rawValue {
             Alamofire.request("http://woke-api.loluvw.xyz:3000/hateArticle", method: .post, parameters: parameters, encoding: JSONEncoding.default)
@@ -172,10 +171,10 @@ extension NewsViewController: FaveButtonDelegate {
                     guard let responseDict = response.result.value as? [String:Any] else {
                         return
                     }
-                    let newEstimatedBias = responseDict["estimatedBias"] as! Int
+                    let newEstimatedBias = responseDict["estimatedBias"] as! Double
+                    User.set(score: newEstimatedBias)
                     print(newEstimatedBias)
             }
-            User.update(by: 1)
         }
     }
 }

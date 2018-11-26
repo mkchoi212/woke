@@ -15,6 +15,10 @@ class SettingsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        slider.minimumValue = 1
+        slider.maximumValue = 5
+        slider.setValue(Float(User.score()), animated: false)
     }
     
     @IBAction func cancelPressed() {
@@ -56,7 +60,7 @@ extension SettingsViewController {
         let alert = UIAlertController(title: title, message: "Do you really want to reset your statistics?", preferredStyle: UIAlertControllerStyle.alert)
         
         let ok = UIAlertAction(title: "OK", style: .destructive) { _ in
-            User.clearScores()
+            User.reset()
         }
         let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         _ = [ok, cancel].map{ alert.addAction($0) }

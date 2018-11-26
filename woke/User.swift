@@ -5,45 +5,35 @@
 //  Created by Mike Choi on 11/4/18.
 //  Copyright © 2018 Mike Choi. All rights reserved.
 //
-// User score ranges from 1.0 to 6.0 [1, 2, 3, 4, 5, 6]
-// with default score being 3.5 (moderate)
+// User score ranges from 0.0 to 4.0 [0, 1, 2, 3, 4]
+// with default score being 2.0 (moderate)
 //
 
 import Foundation
 
 struct User {
     private static let key = "USER_SCORE"
+    private static let written = "SCORE_WRITTEN"
     private static let uuid_key = "USER_UUIID"
     
-    private static func scoreArray() -> [Int] {
-        guard let scores = UserDefaults.standard.array(forKey: User.key) as? [Int] else {
-            return []
-        }
-        
-        return scores
-    }
-    
     static func score() -> Double {
-        let scores = User.scoreArray()
+        let defaults = UserDefaults.standard
         
-        if scores.count == 0 {
-            return 3.5
-        } else {
-            return Double(scores.reduce(0, +)) / Double(scores.count)
-        }
+        let isWritten = defaults.bool(forKey: User.written)
+        return isWritten ? defaults.double(forKey: User.key) : 2.0
     }
     
     static func stringRepresentation() -> String {
         switch User.score() {
-        case 1.0 ..< 2.0:
+        case 0.0 ..< 1.0:
             return "left"
-        case 2.0 ..< 3.0:
+        case 1.0 ..< 2.0:
             return "leftCenter"
-        case 3.0 ..< 4.0:
+        case 2.0 ..< 3.0:
             return "center"
-        case 4.0 ..< 5.0:
+        case 3.0 ..< 4.0:
             return "rightCenter"
-        case 5.0 ... 6.0:
+        case 4.0 ... 5.0:
             return "right"
         default:
             fatalError("Invalid user score range")
@@ -53,29 +43,28 @@ struct User {
     static func decimalRepresentation(of description: String) -> Double {
         switch description {
         case "left":
+            return 0.0
+        case  "left-center":
             return 1.0
-        case  "leftCenter":
-            return 2.0
         case "center":
+            return 2.0
+        case "right-center":
             return 3.0
-        case "rightCenter":
-            return 4.0
         case "right":
-            return 5.0
+            return 4.0
         default:
             fatalError("Invalid user score range")
         }
     }
     
-    static func update(by score: Int) {
-        var scores = User.scoreArray()
-        scores.append(score)
-        
-        UserDefaults.standard.set(scores, forKey: User.key)
+    static func set(score: Double) {
+        UserDefaults.standard.set(true, forKey: User.written)
+        UserDefaults.standard.set(score, forKey: User.key)
     }
     
-    static func clearScores() {
-        UserDefaults.standard.set([], forKey: User.key)
+    static func reset() {
+        UserDefaults.standard.set(false, forKey: User.written)
+        UserDefaults.standard.set(0.0, forKey: User.key)
     }
 }
 
