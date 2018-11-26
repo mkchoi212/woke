@@ -58,6 +58,8 @@ extension SettingsViewController {
         
         let ok = UIAlertAction(title: "OK", style: .destructive) { _ in
             User.reset()
+            self.slider.fraction = 0.5
+            self.slider.contentViewColor = UIColor(polarity: User.score())
         }
         let cancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         _ = [ok, cancel].map{ alert.addAction($0) }

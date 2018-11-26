@@ -54,7 +54,7 @@ extension Item : Equatable {
             author = authorArray[0]
         }
         
-        Item.dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        Item.dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         var articleDate: Date
         if let date = Item.dateFormatter.date(from: itemDict["date_modify"] as? String ?? "") {
             articleDate = date
